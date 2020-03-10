@@ -6,6 +6,6 @@ int main() {
     pedir_entrada();
     ESTADO *e = inicializar_estado();
     interpretador(e);
-    fim();
+    fim(?);
     return 0;
 }
