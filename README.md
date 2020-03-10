@@ -4,8 +4,8 @@
 ## Turno: PL3
 ## Número:
 ## Elementos: 
-  * João Manuel Cardoso Guedes (a94013)
-  * João Daniel da Silva Carvalho (a94015)
-  * Miguel _ _ Tavares (a00000)
+  * [João Manuel Cardoso Guedes (a94013)](https://github.com/FrancesinhaMan)
+  * [João Daniel da Silva Carvalho (a94015)]()
+  * [Miguel _ _ Tavares (a00000)]()
 
 
