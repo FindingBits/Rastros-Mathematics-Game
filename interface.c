@@ -26,13 +26,25 @@ void entrada() {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
         }
-}
+   }
         else if (x == 2) {
             printf("created by Joao Carvalho, Joao Guedes, Miguel Tavares in 2020.\n");
             printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n");
 
         }
-    }
+   }
+
+
+void fim(){
+   int x;
+   if(x==1){
+       printf("vencedor:jodador 1");
+   }
+   else if(x==2){
+       printf("vencedor:jodador 2");
+   }
+
+}
 
 
 // Função que deve ser completada e colocada na camada de interface
