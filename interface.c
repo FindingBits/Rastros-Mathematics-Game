@@ -37,6 +37,14 @@ void entrada() {
 
 // Função que deve ser completada e colocada na camada de interface
 void mostrar_tabuleiro (ESTADO *e) {
+    e -> tab;
+    putchar('\n');
+    for(int i=0;i<8;i++){
+        for(int j=0;j<8;j++){
+            printf("%d",e->tab);
+        }
+        putchar('\n');
+    }
 }
 
 // Função que deve ser completada e colocada na camada de interface
