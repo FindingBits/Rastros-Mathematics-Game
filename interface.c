@@ -9,24 +9,24 @@
 
 
 void entrada(){
-int x,y;
-printf("Bem vindo ao jogo rastos\n\n\n");
-printf("1-Jogar  2-Informacao\n");
-printf("opcao:");
-scanf("%d",&x);
-if(x==1){
-printf("1-jogador numero um   2-jogador numero dois   3-sair\n");
-printf("Escolha o seu numero de jogador:");
-scanf("%d",&y);
-if(y==1){
-printf("escolheu o jogador 1\n");
-printf("o outro jogador e o numero 2\n");
+    int x,y;
+    printf("Bem vindo ao jogo rastos\n\n\n");
+    printf("1-Jogar  2-Informacao\n");
+    printf("opcao:");
+    scanf("%d",&x);
+    if(x==1){
+    printf("1-jogador numero um   2-jogador numero dois   3-sair\n");
+    printf("Escolha o seu numero de jogador:");
+    scanf("%d",&y);
+    if(y==1){
+    printf("escolheu o jogador 1\n");
+    printf("o outro jogador e o numero 2\n");
 
-}
-else if(y==2){
-printf("escolheu o jogador 2\n");
-printf("o outro jogador e o numero 1\n");
-}
+    }
+    else if(y==2){
+    printf("escolheu o jogador 2\n");
+    printf("o outro jogador e o numero 1\n");
+    }
 
 }
 else if(x==2){
