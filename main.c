@@ -7,6 +7,9 @@ int main() {
     pedir_entrada();
     ESTADO *e = inicializar_estado();
     interpretador(e);
+    while(?){
+        jogar(?);
+    }
     fim(?);
     return 0;
 }
