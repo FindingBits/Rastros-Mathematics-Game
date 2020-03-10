@@ -6,6 +6,6 @@
 ## Elementos: 
   * [João Manuel Cardoso Guedes (a94013)](https://github.com/FrancesinhaMan)
   * [João Daniel da Silva Carvalho (a94015)](https://github.com/joodanic)
-  * [Miguel _ _ Tavares (a00000)]()
+  * [Miguel António Borges Tavares (a91690)]()
 
 
