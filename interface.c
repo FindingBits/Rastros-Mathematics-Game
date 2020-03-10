@@ -35,8 +35,7 @@ void entrada() {
    }
 
 
-void fim(){
-   int x;
+void fim(int x){
    if(x==1){
        printf("vencedor:jodador 1");
    }
