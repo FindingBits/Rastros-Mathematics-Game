@@ -26,7 +26,7 @@ void entrada() {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
         }
-    }
+}
         else if (x == 2) {
             printf("created by Joao Carvalho, Joao Guedes, Miguel Tavares in 2020.\n");
             printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n");
@@ -35,22 +35,10 @@ void entrada() {
     }
 
 
-// Função que deve ser completada e colocada na camada da lógica do programa
-int jogar(ESTADO *e, COORDENADA c) {
-    printf("jogar %d %d\n", c.coluna, c.linha);
-    return 1;
-}
 // Função que deve ser completada e colocada na camada de interface
 void mostrar_tabuleiro (ESTADO *e) {
 }
-// Função que deve ser completada e colocada na camada de dados ESTADO
-*inicializar_estado() {
-    ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
-    e->jogador_atual = 1;
-    e->num_jogadas = 0;
-    // Falta a resto da inicialização.
-     return e;
-}
+
 // Função que deve ser completada e colocada na camada de interface
 int interpretador(ESTADO *e) {
     char linha[BUF_SIZE];
