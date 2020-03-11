@@ -4,7 +4,6 @@
 #include "logica.h"
 int main() {
     entrada();
-    pedir_entrada();
     ESTADO *e = inicializar_estado();
     interpretador(e);
     while(?){
