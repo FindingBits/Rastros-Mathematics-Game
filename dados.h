@@ -22,10 +22,6 @@ typedef struct {
 #define GUIAO5_LOGICA_H
 
 #endif //GUIAO5_LOGICA_H
-int jogar(ESTADO *estado, COORDENADA c);
-void mostrar_tabuleiro (ESTADO *e);
-void entrada();
-int interpretador(ESTADO *e);
 ESTADO *inicializar_estado();
 int obter_jogador_atual(ESTADO *estado);
 int obter_numero_de_jogadas(ESTADO *estado);
