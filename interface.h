@@ -26,5 +26,7 @@ typedef struct {
 
 void mostrar_tabuleiro (ESTADO *e);
 void entrada();
+void pedir_entrada();
 *inicializar_estado();
 int interpretador(ESTADO *e);
+void fim(int x);
