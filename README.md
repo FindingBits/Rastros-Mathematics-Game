@@ -10,4 +10,6 @@
   * [(@joodanic) João Daniel da Silva Carvalho (a94015)](https://github.com/joodanic)
   * [(@Miggs7) Miguel António Borges Tavares (a91690)](https://github.com/Miggs7)
 
+## ScreenShot
+![ScreenShot](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/Capturar.PNG)
 
