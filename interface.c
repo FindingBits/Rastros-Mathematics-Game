@@ -21,10 +21,12 @@ void entrada() {
         if (y == 1) {
             printf("escolheu o jogador 1\n");
             printf("o outro jogador e o numero 2\n");
+            pedir_entrada();
 
         } else if (y == 2) {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
+            pedir_entrada();
         }
    }
         else if (x == 2) {
