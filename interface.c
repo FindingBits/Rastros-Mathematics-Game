@@ -36,6 +36,13 @@ void entrada() {
         }
    }
 
+void pedir_entrada() {
+    printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
+    printf("Insira as coordenadas:");
+    ESTADO *e = inicializar_estado();
+    scanf("%d",&e);
+    interpretador(e);
+}
 
 void fim(int x){
    if(x==1){
