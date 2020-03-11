@@ -34,6 +34,11 @@ void entrada() {
             printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n");
 
         }
+        else if(x!=1 || x!=2){
+            printf("\nesse valor nao e valido!\n");
+            printf("tente novamente\n\n");
+            entrada();
+        }
    }
 
 void pedir_entrada() {
