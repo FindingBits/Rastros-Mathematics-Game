@@ -2,6 +2,7 @@
 #include <string.h>
 #include "interface.h"
 #include "logica.h"
+#include "dados.h"
 int main() {
     int x;
     entrada();
