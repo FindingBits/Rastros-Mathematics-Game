@@ -1,5 +1,5 @@
 //
-// Created by João CArvalho on 10/03/2020.
+// Created by João Carvalho on 10/03/2020.
 //
 
 #ifndef JOGO_INTERFACE_H
@@ -27,6 +27,5 @@ typedef struct {
 void mostrar_tabuleiro (ESTADO *e);
 void entrada();
 void pedir_entrada();
-*inicializar_estado();
 int interpretador(ESTADO *e);
 void fim(int x);
