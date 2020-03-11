@@ -6,7 +6,6 @@
 int main() {
     int x;
     entrada();
-    ESTADO *e = inicializar_estado();
     interpretador(e);
     while(?){
         jogar(?);
