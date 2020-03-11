@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "header.h"
+#include "dados.h"
 
 ESTADO *inicializar_estado(){
 	ESTADO * novo;
