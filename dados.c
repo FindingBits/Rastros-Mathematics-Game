@@ -1,26 +1,30 @@
 #include <stdio.h>
+#include "header.h"
 
-int jogador_atual(){
+ESTADO *inicializar_estado(){
+	ESTADO * novo;
+	
 
-    return 0;
+	//reset jogador atual
+	novo->jogador_atual = 1;
+			
+	return novo;
 }
 
-int main(int argc, char **argv){
-    jogador_atual();
-    int player=0;
-    int turn;
-    int noturns;
+int obter_jogador_atual(ESTADO *estado){
+	
+	
+	return estado->jogador_atual;
 
-    for(noturns=0;noturns<15;noturns++)
-    {
-        for(turn=0;turn<15;turn++)
-        {
-            for(turn=0;turn<2;turn++) {
 
-                player = !player;
-                printf("Turn nº%d.player: %d\n", noturns, player);
-            }
-        }
-    }
-    return 0;
+}
+
+int obter_numero_de_jogadas(ESTADO *estado){
+
+	return estado->num_jogadas;
+}
+
+int obter_estado_casa(ESTADO *e, COORDENADA c){
+	return e->tab[c.linha][c.coluna];
+
 }
