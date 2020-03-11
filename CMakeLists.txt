@@ -5,3 +5,4 @@ set(CMAKE_C_STANDARD 99)
 
 add_executable(jogo main.c interface.c interface.h)
 add_executable(jogo main.c logica.c logica.h)
+add_executable(jogo main.c dados.c dados.h)
