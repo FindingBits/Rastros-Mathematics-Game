@@ -3,12 +3,13 @@
 #include "interface.h"
 #include "logica.h"
 int main() {
+    int x;
     entrada();
     ESTADO *e = inicializar_estado();
     interpretador(e);
     while(?){
         jogar(?);
     }
-    fim(?);
+    fim(x);
     return 0;
 }
