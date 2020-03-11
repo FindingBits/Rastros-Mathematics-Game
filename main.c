@@ -7,9 +7,9 @@ int main() {
     int x;
     entrada();
     interpretador(e);
-    while(?){
-        jogar(?);
+    while(1){
+        int jogo = jogar(?);
     }
-    fim(x);
+    fim(e->jogador_atual);
     return 0;
 }
