@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "header.h"
+#include "dados.h"
 
 
 ESTADO *inicializar_estado(){
