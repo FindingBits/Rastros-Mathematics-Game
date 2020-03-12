@@ -1,5 +1,6 @@
 # Laboratorios-Algoritmia Jogo (Guião 5)
-#### Um jogo de tabuleiro feito na linguagem C 
+#### Um jogo de tabuleiro feito na linguagem C
+![ScreenShot](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/jogo.PNG)
 
 ## Turno
   * PL3
