@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include <string.h>
-#include "interface.h"
-#include "logica.h"
-int main() {
-    int x;
-    ESTADO *e;
-    entrada();
+#include "header.h"
+
+int main()
+{
+    ESTADO *e = inicializar_estado();
+
     interpretador(e);
-    //fim(1);
+
+
     return 0;
 }

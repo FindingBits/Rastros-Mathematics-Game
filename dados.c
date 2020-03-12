@@ -1,16 +1,21 @@
 #include <stdio.h>
-#include "interface.h"
-#include "logica.h"
+#include <stdlib.h>
+#include "header.h"
+
 
 ESTADO *inicializar_estado(){
-	ESTADO * novo;
-	
-
-	//reset jogador atual
-	novo->jogador_atual = 1;
-			
-	return novo;
-}
+    // Função que deve ser completada e colocada na camada de dados
+        ESTADO *e = (ESTADO *) malloc(sizeof(ESTADO));
+        e->jogador_atual = 1;
+        e->num_jogadas = 0;
+        for(int i=0;i<8;i++) {
+            for (int j = 0; j < 8; j++) {
+                e->tab[i][j] = 0;
+            }
+        }
+// Falta a resto da inicialização.
+        return e;
+    }
 
 int obter_jogador_atual(ESTADO *estado){
 	
@@ -26,6 +31,7 @@ int obter_numero_de_jogadas(ESTADO *estado){
 }
 
 int obter_estado_casa(ESTADO *e, COORDENADA c){
+
 	return e->tab[c.linha][c.coluna];
 
 }
