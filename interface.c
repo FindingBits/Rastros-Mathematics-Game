@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "interface.h"
+#include "logica.h"
 #include <string.h>
 #define BUF_SIZE 1024
 

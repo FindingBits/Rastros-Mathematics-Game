@@ -2,6 +2,7 @@
 // Created by João Guedes on 10/03/2020.
 //
 
+#include "interface.h"
 #include "logica.h"
 #include <stdio.h>
 #include <string.h>

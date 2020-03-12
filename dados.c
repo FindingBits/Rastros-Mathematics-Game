@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "dados.h"
+#include "interface.h"
+#include "logica.h"
 
 ESTADO *inicializar_estado(){
 	ESTADO * novo;
