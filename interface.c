@@ -2,34 +2,36 @@
 // Created by João Carvalho on 10/03/2020.
 //
 #include <stdio.h>
-#include "header.h"
 #include <string.h>
 #include <stdlib.h>
+#include "interface.h"
+#include "logica.h"
 #define BUF_SIZE 1024
 
 // Função que deve ser completada e colocada na camada de interface
 int interpretador(ESTADO *e) {
     //menu
-    entrada();
-
-    mostrar_tabuleiro(e);
-    printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
-    printf("Insira as coordenadas:\n");
-
-    char linha[BUF_SIZE];
-    char col[2], lin[2];
-    if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
-    if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-        COORDENADA coord = {*col - 'a', *lin - '1'};
-
-        jogar(e, coord);
+    if(entrada()){
         mostrar_tabuleiro(e);
+        printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
+        printf("Insira as coordenadas:\n");
 
+        char linha[BUF_SIZE];
+        char col[2], lin[2];
+        if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+        if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
+            COORDENADA coord = {*col - 'a', *lin - '1'};
+
+            jogar(e, coord);
+            mostrar_tabuleiro(e);
+
+        }
+        return 1;
     }
-    return 1;
+
 }
 
-void entrada() {
+int entrada() {
 
     int x, y;
     char buff[15];
@@ -57,22 +59,25 @@ void entrada() {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
 
-        } else if (y == 3) {
-            printf("sair\n");
-        } else {
+        }else{
             printf("invalido\n");
+            entrada();
         }
 
         //informação
     }else if (x == 2) {
         printf("created by Joao Carvalho, Joao Guedes, Miguel Tavares in 2020.\n");
         printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n");
-
+        return 0;
         //sair do jogo
-    } else if (x != 1 || x != 3) {
-        printf("\nesse valor nao e valido!\n");
-        printf("tente novamente\n\n");
+    } else if (x == 3) {
+        printf("\nSaida!\n");
+        return 0;
+    }else{
+        printf("\nEsse valor nao e valido.\nTente novamente.\n");
+        return 0;
     }
+    return 1;
 }
 
 

@@ -2,7 +2,7 @@
 // Created by João Guedes on 10/03/2020.
 //
 
-#include "header.h"
+#include "dados.h"
 #include <stdio.h>
 #include <string.h>
 

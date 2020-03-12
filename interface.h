@@ -10,7 +10,7 @@
 
 
 void mostrar_tabuleiro (ESTADO *e);
-void entrada();
+int entrada();
 void pedir_entrada();
 int interpretador(ESTADO *e);
 void fim(int x);
