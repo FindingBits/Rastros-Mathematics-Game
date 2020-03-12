@@ -1,4 +1,4 @@
-//
+//to test
 // Created by Miguel on 12/03/2020.
 //
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
