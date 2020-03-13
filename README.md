@@ -1,6 +1,6 @@
 # Laboratorios-Algoritmia Jogo (Guião 5)
 #### Um jogo de tabuleiro feito na linguagem C
-![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/jogo.PNG)
+
 ## Turno
   * PL3
 ## Número do Grupo
@@ -12,4 +12,7 @@
 
 ## ScreenShot
 ![ScreenShot](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/Capturar.PNG)
+
+## GameBoard
+![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/jogo.PNG)
 
