@@ -59,7 +59,7 @@ int entrada() {
             return 0;
         }
         else{
-            printf("invalido!");
+            printf("invalido!\n");
             entrada();
         }
     }
@@ -69,7 +69,7 @@ int entrada() {
     }
     else{
         printf("\nEsse valor nao e valido.\nTente novamente.\n");
-        return 0;
+        entrada();
     }
     return 1;
 }
