@@ -8,77 +8,57 @@
 #include "logica.h"
 #define BUF_SIZE 1024
 
-// Função que deve ser completada e colocada na camada de interface
-
 int interpretador(ESTADO *e) {
-    //menu
-
         if (entrada()) {
-            while(1){
-            mostrar_tabuleiro(e);
+                mostrar_tabuleiro(e);
             printf("coordenas disponiveis: coluna: a-h, linha: 0-7 ('sair' para sair do jogo)\n");
             printf("Insira as coordenadas:\n");
-
             char linha[BUF_SIZE];
             char col[2], lin[2];
             if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
             if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
                 COORDENADA coord = {*col - 'a', *lin - '1'};
-
                 jogar(e, coord);
-
-
             }
-
         }
-
-    }
     return 1;
-}
+    }
+
 
 int entrada() {
-
     int x, y;
     char buff[15];
-
     printf("Bem vindo ao jogo rastos\n\n\n");
-    printf("1-Jogar  2-Informacao 3-Sair\n");
-
+    printf("1-Jogar  2-Informacao  3-Sair\n");
     printf("opcao:");
-    fgets(buff, 15, stdin);
-    x = atoi(buff);
-
+    scanf("%d",&x);
     if (x == 1) {
-
-        printf("1-jogador numero um   2-jogador numero dois   3-sair\n");
+        printf("1-jogador numero um   2-jogador numero dois\n");
         printf("Escolha o seu numero de jogador:");
-        fgets(buff, 15, stdin);
-        y = atoi(buff);
-
-        //escolher jogador
+        scanf("%d",&y);
         if (y == 1) {
             printf("escolheu o jogador 1\n");
             printf("o outro jogador e o numero 2\n");
-
-        } else if (y == 2) {
+        }
+        else if (y == 2) {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
-
-        }else{
+        }
+        else{
             printf("invalido\n");
             entrada();
         }
-
-        //informação
-    }else if (x == 2) {
+    }
+    else if (x == 2) {
         printf("created by Joao Carvalho, Joao Guedes, Miguel Tavares in 2020.\n");
         printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n");
         return 0;
-        //sair do jogo
-    } else if (x == 3) {
+    }
+    else if (x == 3) {
         printf("\nSaida!\n");
         return 0;
-    }else{
+    }
+    else{
         printf("\nEsse valor nao e valido.\nTente novamente.\n");
         return 0;
     }
@@ -86,7 +66,6 @@ int entrada() {
 }
 
 
-// Função que deve ser completada e colocada na camada de interface
 void mostrar_tabuleiro (ESTADO *e) {
     putchar('\n');
     for(int i=0;i<8;i++){
@@ -112,7 +91,6 @@ void mostrar_tabuleiro (ESTADO *e) {
                 }
             }
         }
-
         putchar('\n');
     }
     printf( "   a   b   c   d   e   f   g   h");
