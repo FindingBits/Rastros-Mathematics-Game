@@ -9,20 +9,21 @@
 #define BUF_SIZE 1024
 
 int interpretador(ESTADO *e) {
-                char linha[BUF_SIZE];
-                char col[2], lin[2];
-                if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
-                if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-                    COORDENADA coord = {*col - 'a', *lin - '1'};
-                    jogar(e, coord);
-                    mostrar_tabuleiro(e);
-                }
-    return 1;
-    }
+            char linha[BUF_SIZE];
+            char col[2], lin[2];
+            if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+            if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
+                COORDENADA coord = {*col - 'a', *lin - '1'};
+                jogar(e, coord);
+                mostrar_tabuleiro(e);
+            }
+            return 1;
+        }
+
 
 
 int entrada() {
-    int x, y;
+    int x, y,z;
     printf("Bem vindo ao jogo rastos\n\n\n");
     printf("1-Jogar  2-Informacao  3-Sair\n");
     printf("opcao:");
@@ -46,8 +47,21 @@ int entrada() {
     }
     else if (x == 2) {
         printf("created by Joao Carvalho, Joao Guedes, Miguel Tavares in 2020.\n");
-        printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n");
-        return 0;
+        printf("Este jogo foi realiazado no ambito da disciplina de laboratorios de algoritmia.\n\n");
+        printf("1-voltar ao menu   2-sair do jogo\n");
+        printf("opcao:");
+        scanf("%d",&z);
+        if(z==1){
+            entrada();
+        }
+        else if(z==2) {
+            printf("\nObrigado por ter jogado");
+            return 0;
+        }
+        else{
+            printf("invalido!");
+            entrada();
+        }
     }
     else if (x == 3) {
         printf("\nSaida!\n");

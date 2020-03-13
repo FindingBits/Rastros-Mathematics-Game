@@ -5,8 +5,9 @@
 int main() {
     if (entrada()) {
         ESTADO *e = inicializar_estado();
-        pedir_entrada();
-        interpretador(e);
+        mostrar_tabuleiro(e);
+            pedir_entrada();
+            interpretador(e);
     }
     else {
         return 0;
