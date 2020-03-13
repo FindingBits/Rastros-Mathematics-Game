@@ -9,25 +9,20 @@
 #define BUF_SIZE 1024
 
 int interpretador(ESTADO *e) {
-        if (entrada()) {
-                mostrar_tabuleiro(e);
-            printf("coordenas disponiveis: coluna: a-h, linha: 0-7 ('sair' para sair do jogo)\n");
-            printf("Insira as coordenadas:\n");
-            char linha[BUF_SIZE];
-            char col[2], lin[2];
-            if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
-            if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-                COORDENADA coord = {*col - 'a', *lin - '1'};
-                jogar(e, coord);
-            }
-        }
+                char linha[BUF_SIZE];
+                char col[2], lin[2];
+                if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+                if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
+                    COORDENADA coord = {*col - 'a', *lin - '1'};
+                    jogar(e, coord);
+                    mostrar_tabuleiro(e);
+                }
     return 1;
     }
 
 
 int entrada() {
     int x, y;
-    char buff[15];
     printf("Bem vindo ao jogo rastos\n\n\n");
     printf("1-Jogar  2-Informacao  3-Sair\n");
     printf("opcao:");
@@ -71,9 +66,10 @@ void mostrar_tabuleiro (ESTADO *e) {
     for(int i=0;i<8;i++){
         for(int j=0;j<8;j++){
             //se estivermos na primeira casa da linha
-            if(j==0){
-                printf( "%d| ", 7-i);
-
+            if(i==0 && j==7) printf("2 |");
+            else if(i==7 && j==0) printf("0| 1 | ");
+            else if(j==0){
+                printf( "%d| ", 8-i);
                 if(e->tab[7-i][j] == 1){
                     printf( "%c | ", 'O');
                 }else if(e->tab[7-i][j] == 2){
@@ -107,4 +103,12 @@ void fim(int x){
         printf("vencedor:jogador 2");
     }
 
+}
+
+void pedir_entrada() {
+    printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
+    printf("Insira as coordenadas:");
+    ESTADO *e = inicializar_estado();
+    scanf("%d",&e);
+    interpretador(e);
 }

@@ -2,12 +2,13 @@
 #include <string.h>
 #include "interface.h"
 
-int main()
-{
-    ESTADO *e = inicializar_estado();
-
-    interpretador(e);
-
-
-    return 0;
+int main() {
+    if (entrada()) {
+        ESTADO *e = inicializar_estado();
+        pedir_entrada();
+        interpretador(e);
+    }
+    else {
+        return 0;
+    }
 }
