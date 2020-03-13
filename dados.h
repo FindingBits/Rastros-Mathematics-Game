@@ -18,12 +18,13 @@ typedef struct {
     int num_jogadas; // valor inicial = 0 jogadas
     int jogador_atual; // valor inicial = 1 
 } ESTADO;
-#ifndef GUIAO5_LOGICA_H
-#define GUIAO5_LOGICA_H
+#ifndef GUIAO5_DADOS_H
+#define GUIAO5_DADOS_H
 
-#endif //GUIAO5_LOGICA_H
+#endif //GUIAO5_DADOS_H
 ESTADO *inicializar_estado();
 int obter_jogador_atual(ESTADO *estado);
 int obter_numero_de_jogadas(ESTADO *estado);
 int obter_estado_casa(ESTADO *e, COORDENADA c);
+COORDENADA obter_ultima_jogada(ESTADO *e);
 

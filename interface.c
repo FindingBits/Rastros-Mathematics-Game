@@ -9,26 +9,31 @@
 #define BUF_SIZE 1024
 
 // Função que deve ser completada e colocada na camada de interface
+
 int interpretador(ESTADO *e) {
     //menu
-    if(entrada()){
-        mostrar_tabuleiro(e);
-        printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
-        printf("Insira as coordenadas:\n");
 
-        char linha[BUF_SIZE];
-        char col[2], lin[2];
-        if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
-        if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-            COORDENADA coord = {*col - 'a', *lin - '1'};
-
-            jogar(e, coord);
+        if (entrada()) {
+            while(1){
             mostrar_tabuleiro(e);
+            printf("coordenas disponiveis: coluna: a-h, linha: 0-7 ('sair' para sair do jogo)\n");
+            printf("Insira as coordenadas:\n");
+
+            char linha[BUF_SIZE];
+            char col[2], lin[2];
+            if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+            if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
+                COORDENADA coord = {*col - 'a', *lin - '1'};
+
+                jogar(e, coord);
+
+
+            }
 
         }
-        return 1;
-    }
 
+    }
+    return 1;
 }
 
 int entrada() {
@@ -91,17 +96,17 @@ void mostrar_tabuleiro (ESTADO *e) {
                 printf( "%d| ", 7-i);
 
                 if(e->tab[7-i][j] == 1){
-                    printf( "%c | ", '@');
-                }else if(e->tab[7-i][j] == 2){
                     printf( "%c | ", 'O');
+                }else if(e->tab[7-i][j] == 2){
+                    printf( "%c | ", '@');
                 }else{
                     printf( "%c | ", '_');
                 }
             }else{
                 if(e->tab[7-i][j] == 1){
-                    printf( "%c | ", '@');
-                }else if(e->tab[7-i][j] == 2){
                     printf( "%c | ", 'O');
+                }else if(e->tab[7-i][j] == 2){
+                    printf( "%c | ", '@');
                 }else{
                     printf( "%c | ", '_');
                 }
