@@ -12,8 +12,7 @@ int main() {
             printf("Insira as coordenadas:");
             interpretador(e);
         }
-    }
-    else {
+    }else{
         return 0;
     }
 }
