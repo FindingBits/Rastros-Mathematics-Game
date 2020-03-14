@@ -14,5 +14,5 @@
 ![ScreenShot](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/Capturar.PNG)
 
 ## GameBoard
-![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/jogo.PNG)
+![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/board.PNG)
 
