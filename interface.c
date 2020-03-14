@@ -55,7 +55,7 @@ int entrada() {
             entrada();
         }
         else if(z==2) {
-            printf("\nObrigado por ter jogado");
+            printf("\nObrigado por ter jogado!");
             return 0;
         }
         else{
@@ -64,7 +64,7 @@ int entrada() {
         }
     }
     else if (x == 3) {
-        printf("\nSaida!\n");
+        printf("\nObrigado por ter jogado!\n");
         return 0;
     }
     else{
@@ -120,7 +120,7 @@ void fim(int x){
 }
 
 void pedir_entrada() {
-    printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
+    printf("\ncoordenas disponiveis: coluna: a-h, linha: 0-7\n");
     printf("Insira as coordenadas:");
     ESTADO *e = inicializar_estado();
     scanf("%d",&e);
