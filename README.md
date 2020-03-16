@@ -1,7 +1,7 @@
 # Laboratorios-Algoritmia Jogo (Guião 5)
 #### Um jogo de tabuleiro feito na linguagem C
 
-## [Slack](la1pl3g4.slack.com)
+## [Link para o Slack (la1pl3g4)](la1pl3g4.slack.com)
 
 ## Turno
   * PL3
