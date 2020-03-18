@@ -22,7 +22,7 @@ int interpretador(ESTADO *e) {
 
 
 
-int entrada(Estado *e) {
+int entrada(ESTADO *e) {
     int x, y,z;
     printf("Bem vindo ao jogo rastos\n\n\n");
     printf("1-Jogar  2-Informacao  3-Sair\n");
@@ -44,7 +44,7 @@ int entrada(Estado *e) {
         }
         else{
             printf("invalido\n");
-            entrada();
+            entrada(e);
         }
     }
     else if (x == 2) {
@@ -54,7 +54,7 @@ int entrada(Estado *e) {
         printf("opcao:");
         scanf("%d",&z);
         if(z==1){
-            entrada();
+            entrada(e);
         }
         else if(z==2) {
             printf("\nObrigado por ter jogado!");
@@ -62,7 +62,7 @@ int entrada(Estado *e) {
         }
         else{
             printf("invalido!\n");
-            entrada();
+            entrada(e);
         }
     }
     else if (x == 3) {
@@ -71,7 +71,7 @@ int entrada(Estado *e) {
     }
     else{
         printf("\nEsse valor nao e valido.\nTente novamente.\n");
-        entrada();
+        entrada(e);
     }
     return 1;
 }
