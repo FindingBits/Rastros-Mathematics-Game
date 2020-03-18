@@ -6,10 +6,9 @@ int main() {
     if (entrada()) {
         ESTADO *e = inicializar_estado();
         mostrar_tabuleiro(e);
-        pedir_entrada();
+        pedir_entrada(e);
         while(1) {
-            printf("coordenas disponiveis: coluna: a-h, linha: 0-7\n");
-            printf("Insira as coordenadas:");
+            printf("# %d PL%d (%d)>",(e->num_jogadas+1),e->jogador_atual,e->num_jogadas);
             interpretador(e);
         }
     }else{
