@@ -119,10 +119,8 @@ void fim(int x){
 
 }
 
-void pedir_entrada() {
-    printf("\ncoordenas disponiveis: coluna: a-h, linha: 0-7\n");
-    printf("Insira as coordenadas:");
-    ESTADO *e = inicializar_estado();
+void pedir_entrada(ESTADO *e) {
+    printf("# %d PL%d (%d)>",(e->num_jogadas+1),e->jogador_atual,e->num_jogadas);
     scanf("%d",&e);
     interpretador(e);
 }
