@@ -22,7 +22,7 @@ int interpretador(ESTADO *e) {
 
 
 
-int entrada() {
+int entrada(Estado *e) {
     int x, y,z;
     printf("Bem vindo ao jogo rastos\n\n\n");
     printf("1-Jogar  2-Informacao  3-Sair\n");
@@ -35,10 +35,12 @@ int entrada() {
         if (y == 1) {
             printf("escolheu o jogador 1\n");
             printf("o outro jogador e o numero 2\n");
+            e->jogador_atual=1;
         }
         else if (y == 2) {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
+            e->jogador_atual=2;
         }
         else{
             printf("invalido\n");
