@@ -7,6 +7,7 @@
 Definição do estado e das funções que o manipulam
 */
 #include "dados.h"
+#include "logica.h"
 #ifndef JOGO_INTERFACE_H
 #define JOGO_INTERFACE_H
 
@@ -23,7 +24,7 @@ int entrada();
 /**
 \brief Tipo de interface para mostrar e receber as coordenadas
 */
-void pedir_entrada(ESTADO *e);
+void pedir_entrada(Estado *e);
 /**
 \brief Tipo de interface que le as jogadas e mostra essas jogadas no tabuleiro
 */
