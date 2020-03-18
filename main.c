@@ -3,8 +3,8 @@
 #include "interface.h"
 
 int main() {
-    if (entrada()) {
-        ESTADO *e = inicializar_estado();
+    ESTADO *e = inicializar_estado();
+    if (entrada(e)) {
         mostrar_tabuleiro(e);
         pedir_entrada(e);
         while(1) {
