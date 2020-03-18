@@ -24,7 +24,7 @@ int entrada(ESTADO *e);
 /**
 \brief Tipo de interface para receber as coordenadas
 */
-void pedir_entrada(Estado *e);
+void pedir_entrada(ESTADO *e);
 /**
 \brief Tipo de interface que le as jogadas e mostra essas jogadas no tabuleiro
 */
