@@ -20,7 +20,7 @@ void mostrar_tabuleiro (ESTADO *e);
 /**
 \brief Tipo de interface para mostrar o menu
 */
-int entrada();
+int entrada(ESTADO *e);
 /**
 \brief Tipo de interface para receber as coordenadas
 */
