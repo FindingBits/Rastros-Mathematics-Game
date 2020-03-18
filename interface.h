@@ -22,7 +22,7 @@ void mostrar_tabuleiro (ESTADO *e);
 */
 int entrada();
 /**
-\brief Tipo de interface para mostrar e receber as coordenadas
+\brief Tipo de interface para receber as coordenadas
 */
 void pedir_entrada(Estado *e);
 /**
