@@ -10,5 +10,9 @@ Definição do estado e das funções que o manipulam
 /**
 \brief Função para jogar no tabuleiro
 */
-#endif //GUIAO5_LOGICA_H
 int jogar(ESTADO *estado, COORDENADA c);
+/**
+\brief Função para saber se pode jogar no tabuleiro na posição escolhida
+*/
+int podeJogar(ESTADO *e);
+#endif //GUIAO5_LOGICA_H

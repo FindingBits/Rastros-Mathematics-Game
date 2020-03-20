@@ -35,11 +35,15 @@ int entrada(ESTADO *e) {
         if (y == 1) {
             printf("escolheu o jogador 1\n");
             printf("o outro jogador e o numero 2\n");
+            e->ultima_jogada.coluna=0;
+            e->ultima_jogada.linha=0;
             e->jogador_atual=1;
         }
         else if (y == 2) {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
+            e->ultima_jogada.coluna=8;
+            e->ultima_jogada.linha=8;
             e->jogador_atual=2;
         }
         else{
