@@ -35,15 +35,11 @@ int entrada(ESTADO *e) {
         if (y == 1) {
             printf("escolheu o jogador 1\n");
             printf("o outro jogador e o numero 2\n");
-            e->ultima_jogada.coluna=0;
-            e->ultima_jogada.linha=0;
             e->jogador_atual=1;
         }
         else if (y == 2) {
             printf("escolheu o jogador 2\n");
             printf("o outro jogador e o numero 1\n");
-            e->ultima_jogada.coluna=8;
-            e->ultima_jogada.linha=8;
             e->jogador_atual=2;
         }
         else{
@@ -82,47 +78,49 @@ int entrada(ESTADO *e) {
 
 
 void mostrar_tabuleiro (ESTADO *e) {
+    int win=0;
     putchar('\n');
+    printf( "    a   b   c   d   e   f   g   h\n");
     for(int i=0;i<8;i++){
-        for(int j=0;j<8;j++){
+        for(int j=0;j<=8;j++){
             //se estivermos na primeira casa da linha
-            if(i==0 && j==7) printf("2 |");
-            else if(i==7 && j==0) printf("0| 1 | ");
-            else if(j==0){
-                printf( "%d| ", 8-i);
-                if(e->tab[7-i][j] == 1){
-                    printf( "%c | ", 'O');
-                }else if(e->tab[7-i][j] == 2){
-                    printf( "%c | ", '@');
-                }else{
-                    printf( "%c | ", '_');
-                }
+            if(j==8 && i==0){
+                printf( "%d | ", 2);
+                if(e->tab[i][j]==1) win=1;
+            }else if(j==1 && i==7){
+                printf( "%d | ", 1);
+                if(e->tab[i][j]==2) win=2;
+            }
+
+            else if(j==0) printf("%d | ",i+1);
+            else if(j>0 && e->tab[i][j] == 1){
+                printf( "%c | ", 'O');
+            }
+            else if(j>0 && e->tab[i][j] == 2){
+                printf( "%c | ", '@');
+            }else if(j>0 && e->tab[i][j] == 35){
+                printf( "%c | ", '#');
             }else{
-                if(e->tab[7-i][j] == 1){
-                    printf( "%c | ", 'O');
-                }else if(e->tab[7-i][j] == 2){
-                    printf( "%c | ", '@');
-                }else{
-                    printf( "%c | ", '_');
-                }
+                printf( "%c | ", '_');
             }
         }
         putchar('\n');
     }
-    printf( "   a   b   c   d   e   f   g   h");
     putchar('\n');
+    if(win){ fim(win);}
 }
 
 
 
-void fim(int x){
+int fim(int x){
     if(x==1){
         printf("vencedor:jogador 1");
     }
     else if(x==2){
         printf("vencedor:jogador 2");
     }
-
+    exit(0);
+    return 0;
 }
 
 void pedir_entrada(ESTADO *e) {

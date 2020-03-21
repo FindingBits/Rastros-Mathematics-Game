@@ -32,4 +32,4 @@ int interpretador(ESTADO *e);
 /**
 \brief Tipo de interface para mostrar quem e o vencedor
 */
-void fim(int x);
+int fim(int x);
