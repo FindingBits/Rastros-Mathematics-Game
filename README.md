@@ -16,5 +16,5 @@
 ![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/board.PNG)
 ### Jogada aceite
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/acerta_jogada.PNG)
-### jogada não aceite
+### Jogada não aceite
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/prevencao_jogada.PNG)
