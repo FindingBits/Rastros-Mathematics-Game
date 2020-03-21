@@ -13,8 +13,11 @@
 ## ScreenShots
 
 ### Tabuleiro
+Captura do tabuleiro de jogo
 ![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/board.PNG)
 ### Jogada aceite
+Foi jogada numa casa aceite a peça
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/acerta_jogada.PNG)
 ### Jogada não aceite
+Foi jogada numa casa não aceite a a peça
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/prevencao_jogada.PNG)
