@@ -10,9 +10,11 @@
   * [(@joodanic) João Daniel da Silva Carvalho (a94015)](https://github.com/joodanic)
   * [(@Miggs7) Miguel António Borges Tavares (a91690)](https://github.com/Miggs7)
 
-## ScreenShot
-![ScreenShot](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/Capturar.PNG)
+## ScreenShots
 
-## GameBoard
+### Tabuleiro
 ![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/board.PNG)
-
+### Jogada aceite
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/acerta_jogada.PNG)
+### jogada não aceite
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/prevencao_jogada.PNG)
