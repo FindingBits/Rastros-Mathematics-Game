@@ -24,3 +24,7 @@
  * Foi jogada na casa ``` b4 ``` que se encontra afastada do centro onde inicia o jogo, logo não é aceite
  
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/prevencao_jogada.PNG)
+### Jogador 2 Ganha!
+ * Foi jogada na casa ``` a8 ``` que se encontra na casa do jogador 1, logo o jogador 2 ganha :)
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/ganhar.PNG)
