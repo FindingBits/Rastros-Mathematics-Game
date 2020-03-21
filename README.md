@@ -17,10 +17,10 @@
  
 ![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/board.PNG)
 ### Jogada aceite
- * Foi jogada numa casa aceite a peça
+ * Foi jogada na casa ```txt d5 ``` que se encontra junta do centro onde inicia o jogo, logo é aceite
  
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/acerta_jogada.PNG)
 ### Jogada não aceite
- * Foi jogada numa casa não aceite a a peça
+ * Foi jogada na casa ```txt b4 ``` que se encontra afastada do centro onde inicia o jogo, logo não é aceite
  
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/prevencao_jogada.PNG)
