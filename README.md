@@ -15,7 +15,7 @@
 ### Tabuleiro
  * Captura do tabuleiro de jogo
  
-![ScreenShotGame](https://github.com/FrancesinhaMan/Laboratorios-Algoritmia-Guiao5-Jogo/blob/master/board.PNG)
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/board.PNG)
 ### Jogada aceite
  * Foi jogada na casa ``` d5 ``` que se encontra junta do centro onde inicia o jogo, logo é aceite
  
@@ -28,3 +28,4 @@
  * Foi jogada na casa ``` a8 ``` que se encontra na casa do jogador 1, logo o jogador 2 ganha :)
 
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/ganhar.PNG)
+
