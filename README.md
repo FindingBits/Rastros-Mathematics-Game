@@ -11,7 +11,7 @@
   * [(@Miggs7) Miguel António Borges Tavares (a91690)](https://github.com/Miggs7)
 
 ## ScreenShots
-
+ * Documentação extra encontra-se na pasta ``` doxygen.zip ```
 ### Tabuleiro
  * Captura do tabuleiro de jogo
  
