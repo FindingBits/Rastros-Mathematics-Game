@@ -7,8 +7,12 @@
   * 4
 ## Elementos 
   * [(@FrancesinhaMan) João Manuel Cardoso Guedes (a94013)](https://github.com/FrancesinhaMan)
+    * Realizou a lógica e uma parte do main
   * [(@joodanic) João Daniel da Silva Carvalho (a94015)](https://github.com/joodanic)
+    * Realizou a interface e uma parte do main
   * [(@Miggs7) Miguel António Borges Tavares (a91690)](https://github.com/Miggs7)
+    * Realizou os dados e uma parte do main
+  * Em suma, existiu também uma interajuda em cada componente
 
 ## ScreenShots
  * Documentação extra encontra-se na pasta ``` doxygen.zip ```
