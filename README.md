@@ -29,7 +29,7 @@
  
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/prevencao_jogada.PNG)
 ### Jogador 2 Ganha!
- * Foi jogada na casa ``` a8 ``` (entre outras jogadas para fazer o caminho)que se encontra na casa do jogador 1, logo o jogador 2 ganha :)
+ * Foi jogada na casa ``` a8 ``` (__entre outras jogadas para fazer o caminho__) que se encontra na casa do jogador 1, logo o jogador 2 ganha :)
 
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/ganhar.PNG)
 
