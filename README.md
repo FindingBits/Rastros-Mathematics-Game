@@ -1,4 +1,4 @@
-# Laboratorios-Algoritmia Jogo (Guião 5)
+# Laboratorios-Algoritmia Jogo
 #### Um jogo de tabuleiro feito na linguagem C
 
 ## Turno
