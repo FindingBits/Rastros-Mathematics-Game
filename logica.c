@@ -5,6 +5,7 @@ int passouCasaMeio=0;
 #include "dados.h"
 #include <stdio.h>
 #include <string.h>
+#define BUF_SIZE 1024
 int podeJogar(ESTADO *e, COORDENADA c){
     printf("\nNavegador: %c, l+1: %d, l-1: %d, c+1: %d, c-1: %d\n",e->tab[c.linha][c.coluna],e->tab[c.linha+1][c.coluna],e->tab[c.linha-1][c.coluna],e->tab[c.linha][c.coluna+1],e->tab[c.linha][c.coluna-1]);
     if(/* branca */(e->tab[c.linha+1][c.coluna]==1 || e->tab[c.linha-1][c.coluna]==1 || e->tab[c.linha][c.coluna+1]==1 || e->tab[c.linha][c.coluna-1]==1 || e->tab[c.linha+1][c.coluna]=='#' || e->tab[c.linha-1][c.coluna]=='#' || e->tab[c.linha][c.coluna+1]=='#' || e->tab[c.linha][c.coluna-1]=='#')){
@@ -27,6 +28,24 @@ int podeJogar(ESTADO *e, COORDENADA c){
         }
     }else return 0;
 }
+int updateJogadas(ESTADO *e, COORDENADA c){
+    COORDENADA toDo;
+    COORDENADA blank;
+    blank.linha=0;
+    blank.coluna=0;
+    toDo.linha=c.linha;
+    toDo.coluna=c.coluna;
+    if(e->jogador_atual==1){
+        e->jogadas[e->num_jogadas].jogador1=toDo;
+        e->jogadas[e->num_jogadas].jogador2=blank;
+        return 1;
+    }else if(e->jogador_atual==2){
+        e->jogadas[e->num_jogadas].jogador1=blank;
+        e->jogadas[e->num_jogadas].jogador2=toDo;
+        return 1;
+    }
+    return 0;
+}
 
 int jogar(ESTADO *e, COORDENADA c){
     c.coluna=c.coluna+1;
@@ -37,6 +56,8 @@ int jogar(ESTADO *e, COORDENADA c){
         }else if (e->jogador_atual==2){
             e->tab[c.linha][c.coluna] = 2;
         }else return 1;
+        if(updateJogadas(e,c)) printf("\nAtualizou jogada!\n");
+        else printf("\nNão Atualizou jogada!\n");
         e->num_jogadas += 1;
         // troca jogador
         if(e->jogador_atual ==1 ){
