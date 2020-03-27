@@ -17,6 +17,18 @@ int interpretador(ESTADO *e) {
                 jogar(e, coord);
                 mostrar_tabuleiro(e);
             }
+            else if(strcmp(linha,"movs")==0){
+                int i;
+                for(i=0;i<obter_numero_de_jogadas(e);i++){
+                    printf("## (%d,%d) (%d,%d)",(e->jogadas[i].jogador1.linha),(e->jogadas[i].jogador1.coluna),(e->jogadas[i].jogador2.linha),(e->jogadas[i].jogador2.coluna));
+                    }
+            }
+            else if(strcmp(linha,"gr")==0){
+
+            }
+            else if(strcmp(linha,"ler")==0){
+
+            }
             return 1;
         }
 
