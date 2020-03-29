@@ -23,18 +23,18 @@ int interpretador(ESTADO *e) {
                 for(i=0;i<obter_numero_de_jogadas(e);i++) {
                     if (e->jogador_atual = 1) {
                         if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
-                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.linha),
+                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.linha+1),
                                    (e->jogadas[i].jogador1.coluna));
                         } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
-                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.linha),
+                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.linha+1),
                                    (e->jogadas[i].jogador2.coluna));
                         }
                     } else if (e->jogador_atual = 2) {
                         if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
-                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.linha),
+                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.linha+1),
                                    (e->jogadas[i].jogador2.coluna));
                         } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
-                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.linha),
+                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.linha+1),
                                    (e->jogadas[i].jogador1.coluna));
                         }
                     }
