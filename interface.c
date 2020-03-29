@@ -39,7 +39,6 @@ int interpretador(ESTADO *e) {
                         }
                     }
                 }
-
             }
             else if(strcmp(linha,"gr")==0){
 
