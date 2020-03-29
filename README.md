@@ -37,3 +37,8 @@
 
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/ler%20e%20ecrever.PNG)
 
+### Movimentos ocorridos
+ * Uso da função ``` movs ```
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/movs.PNG)
+
