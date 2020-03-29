@@ -20,14 +20,26 @@ int interpretador(ESTADO *e) {
             else if(strlen(linha) == 5 ){
                 int i;
                 printf("Movimentos:\n");
-                for(i=0;i<obter_numero_de_jogadas(e);i++){
-                    if(e->jogadas[i].jogador1.linha !=0 && e->jogadas[i].jogador1.linha!=0) {
-                        printf("## (%d,%d)\n", (e->jogadas[i].jogador1.linha), (e->jogadas[i].jogador1.coluna));
+                for(i=0;i<obter_numero_de_jogadas(e);i++) {
+                    if (e->jogador_atual = 1) {
+                        if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
+                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.linha),
+                                   (e->jogadas[i].jogador1.coluna));
+                        } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.linha),
+                                   (e->jogadas[i].jogador2.coluna));
+                        }
+                    } else if (e->jogador_atual = 2) {
+                        if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.linha),
+                                   (e->jogadas[i].jogador2.coluna));
+                        } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
+                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.linha),
+                                   (e->jogadas[i].jogador1.coluna));
+                        }
                     }
-                    else if(e->jogadas[i].jogador2.linha !=0 && e->jogadas[i].jogador2.linha!=0) {
-                        printf("## (%d,%d)\n", (e->jogadas[i].jogador2.linha), (e->jogadas[i].jogador2.coluna));
-                    }
-                    }
+                }
+
             }
             else if(strcmp(linha,"gr")==0){
 
