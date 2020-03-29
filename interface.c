@@ -9,41 +9,63 @@
 #define BUF_SIZE 1024
 
 int interpretador(ESTADO *e) {
-            char linha[BUF_SIZE];
-            char col[2], lin[2];
-            if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
-            if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
-                COORDENADA coord = {*col - 'a', *lin - '1'};
-                jogar(e, coord);
-                mostrar_tabuleiro(e);
-            }
-            else if(strlen(linha) == 5 ){
-                int i;
-                printf("Movimentos:\n");
-                for(i=0;i<obter_numero_de_jogadas(e);i++) {
-                    if (e->jogador_atual = 1) {
-                        if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
-                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
-                                   (e->jogadas[i].jogador1.linha+1));
-                        } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
-                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
-                                   (e->jogadas[i].jogador2.linha+1));
-                        }
-                    } else if (e->jogador_atual = 2) {
-                        if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
-                            printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
-                                   (e->jogadas[i].jogador2.linha+1));
-                        } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
-                            printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
-                                   (e->jogadas[i].jogador1.linha+1));
-                        }
-                    }
+    char linha[BUF_SIZE];
+    char col[2], lin[2];
+    if (fgets(linha, BUF_SIZE, stdin) == NULL) return 0;
+    if (strlen(linha) == 3 && sscanf(linha, "%[a-h]%[1-8]", col, lin) == 2) {
+        COORDENADA coord = {*col - 'a', *lin - '1'};
+        jogar(e, coord);
+        mostrar_tabuleiro(e);
+    } else if (strlen(linha) == 5) {
+        int i;
+        printf("Movimentos:\n");
+        for (i = 0; i < obter_numero_de_jogadas(e); i++) {
+            if (e->jogador_atual = 1) {
+                if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
+                    printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
+                           (e->jogadas[i].jogador1.linha + 1));
+                } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+                    printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
+                           (e->jogadas[i].jogador2.linha + 1));
+                }
+            } else if (e->jogador_atual = 2) {
+                if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+                    printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
+                           (e->jogadas[i].jogador2.linha + 1));
+                } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
+                    printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
+                           (e->jogadas[i].jogador1.linha + 1));
                 }
             }
-            else if(strcmp(linha,"gr")==0){
-
+        }
+    } else if (strlen(linha) == 3) {
+        FILE *fp;
+        fp = fopen("file.txt", "w+");
+        fputs("\n- Utimo Tabuleiro -\n", fp);
+        fputs("\n    a   b   c   d   e   f   g   h\n", fp);
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j <= 8; j++) {
+                //se estivermos na primeira casa da linha
+                if (j == 8 && i == 0) {
+                    fputs("2 | ", fp);
+                } else if (j == 1 && i == 7) {
+                    fputs("1 | ", fp);
+                } else if (j == 0) fprintf(fp, "%d | ", i + 1);
+                else if (j > 0 && e->tab[i][j] == 1) {
+                    fputs("O | ", fp);
+                } else if (j > 0 && e->tab[i][j] == 2) {
+                    fputs("@ | ", fp);
+                } else if (j > 0 && e->tab[i][j] == 35) {
+                    fputs("# | ", fp);
+                } else {
+                    fputs("_ | ", fp);
+                }
             }
-            else if(strcmp(linha,"ler")==0){
+            fputs("\n", fp);
+        }
+        fputs("\n", fp);
+        fclose(fp);
+    }else if(strcmp(linha,"ler")==0){
 
             }
             return 1;
