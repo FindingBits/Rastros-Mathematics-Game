@@ -39,8 +39,10 @@ int interpretador(ESTADO *e) {
             }
         }
     } else if (strlen(linha) == 3) {
+        // Executado por João Guedes A94013
         FILE *fp;
         fp = fopen("file.txt", "w+");
+        printf("Escrevendo no ficheiro...\n");
         fputs("\n- Utimo Tabuleiro -\n", fp);
         fputs("\n    a   b   c   d   e   f   g   h\n", fp);
         for (int i = 0; i < 8; i++) {
@@ -65,23 +67,26 @@ int interpretador(ESTADO *e) {
         }
         fputs("\n", fp);
         fclose(fp);
-    }else if(strlen(linha)==4) {
+    }else if(strlen(linha) == 4){
+        // Executado por João Guedes A94013
         char str1;
         FILE *fp;
         printf("\nConteudo do ficheiro:\n");
-        fp = fopen("file.txt", "r");
+        fp=fopen("file.txt", "r");
         printf("\n");
         str1 = fgetc(fp);
-        while (str1 != EOF);
+        while (str1 != EOF)
         {
-            printf("%c", str1);
+            printf ("%c", str1);
             str1 = fgetc(fp);
         }
         printf("\n\n");
-        fclose(fp);
+        fclose (fp);
     }
-            return 1;
-    }
+    return 1;
+}
+
+
 
 int entrada(ESTADO *e) {
     int x, y,z;
@@ -185,7 +190,7 @@ int fim(int x){
 }
 
 void pedir_entrada(ESTADO *e) {
-    printf("# %d PL%d (%d)>", (e->num_jogadas + 1), e->jogador_atual, e->num_jogadas);
-    scanf("%d", &e);
+    printf("# %d PL%d (%d)>",(e->num_jogadas+1),e->jogador_atual,e->num_jogadas);
+    scanf("%d",&e);
     interpretador(e);
 }
