@@ -65,9 +65,21 @@ int interpretador(ESTADO *e) {
         }
         fputs("\n", fp);
         fclose(fp);
-    }else if(strcmp(linha,"ler")==0){
-
-            }
+    }else if(strlen(linha)==4) {
+        char str1;
+        FILE *fp;
+        printf("\nConteudo do ficheiro:\n");
+        fp = fopen("file.txt", "r");
+        printf("\n");
+        str1 = fgetc(fp);
+        while (str1 != EOF);
+        {
+            printf("%c", str1);
+            str1 = fgetc(fp);
+        }
+        printf("\n\n");
+        fclose(fp);
+    }
             return 1;
     }
 
