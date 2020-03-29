@@ -32,4 +32,8 @@
  * Foi jogada na casa ``` a8 ``` (__entre outras jogadas para fazer o caminho__) que se encontra na casa do jogador 1, logo o jogador 2 ganha :)
 
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/ganhar.PNG)
+### Escrita no ficheiro
+ * Leitura e escrita no ficheiro ``` file.txt ```
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/ler%20e%20ecrever.PNG)
 
