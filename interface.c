@@ -17,10 +17,16 @@ int interpretador(ESTADO *e) {
                 jogar(e, coord);
                 mostrar_tabuleiro(e);
             }
-            else if(strcmp(linha,"movs")==0){
+            else if(strlen(linha) == 5 ){
                 int i;
+                printf("Movimentos:\n");
                 for(i=0;i<obter_numero_de_jogadas(e);i++){
-                    printf("## (%d,%d) (%d,%d)",(e->jogadas[i].jogador1.linha),(e->jogadas[i].jogador1.coluna),(e->jogadas[i].jogador2.linha),(e->jogadas[i].jogador2.coluna));
+                    if(e->jogadas[i].jogador1.linha !=0 && e->jogadas[i].jogador1.linha!=0) {
+                        printf("## (%d,%d)\n", (e->jogadas[i].jogador1.linha), (e->jogadas[i].jogador1.coluna));
+                    }
+                    else if(e->jogadas[i].jogador2.linha !=0 && e->jogadas[i].jogador2.linha!=0) {
+                        printf("## (%d,%d)\n", (e->jogadas[i].jogador2.linha), (e->jogadas[i].jogador2.coluna));
+                    }
                     }
             }
             else if(strcmp(linha,"gr")==0){
@@ -30,9 +36,7 @@ int interpretador(ESTADO *e) {
 
             }
             return 1;
-        }
-
-
+    }
 
 int entrada(ESTADO *e) {
     int x, y,z;
@@ -136,7 +140,7 @@ int fim(int x){
 }
 
 void pedir_entrada(ESTADO *e) {
-    printf("# %d PL%d (%d)>",(e->num_jogadas+1),e->jogador_atual,e->num_jogadas);
-    scanf("%d",&e);
+    printf("# %d PL%d (%d)>", (e->num_jogadas + 1), e->jogador_atual, e->num_jogadas);
+    scanf("%d", &e);
     interpretador(e);
 }
