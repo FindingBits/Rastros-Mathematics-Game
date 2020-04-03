@@ -16,24 +16,23 @@ int interpretador(ESTADO *e) {
         COORDENADA coord = {*col - 'a', *lin - '1'};
         jogar(e, coord);
         mostrar_tabuleiro(e);
-    } else if (strcmp(linha,"movs\n")==0) {
-        int i,j,k;
+    } else if (strcmp(linha, "movs\n") == 0) {
+        int i, j, k;
         printf("Movimentos:\n");
         for (i = 0; i < obter_numero_de_jogadas(e); i++) {
             if (e->jogador_atual = 1) {
                 if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
-                    printf("(%d) ##Player1 (%d,%d)  ",(i+1), (e->jogadas[i].jogador1.coluna),
+                    printf("(%d) ##Player1 (%d,%d)  ", (i + 1), (e->jogadas[i].jogador1.coluna),
                            (e->jogadas[i].jogador1.linha + 1));
 
                 } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
                     printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
                 }
-            }
-            else if (e->jogador_atual = 2) {
+            } else if (e->jogador_atual = 2) {
                 if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
                     j++;
-                    printf("(%d) ##Player2 (%d,%d)  ",(i+1), (e->jogadas[i].jogador2.coluna),
+                    printf("(%d) ##Player2 (%d,%d)  ", (i + 1), (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
                 } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
                     printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
@@ -41,7 +40,7 @@ int interpretador(ESTADO *e) {
                 }
             }
         }
-    } else if (strcmp(linha,"gr\n")==0) {
+    } else if (strcmp(linha, "gr\n") == 0) {
         FILE *fp;
         fp = fopen("file.txt", "w+");
         fputs("\n- Utimo Tabuleiro -\n", fp);
@@ -68,23 +67,23 @@ int interpretador(ESTADO *e) {
         }
         fputs("\n", fp);
         fclose(fp);
-    }else if(strcmp(linha,"ler\n")==0) {
+    } else if (strcmp(linha, "ler\n") == 0) {
         char str1;
         FILE *fp;
         printf("\nConteudo do ficheiro:\n");
         fp = fopen("file.txt", "r");
         printf("\n");
         str1 = fgetc(fp);
-        while (str1 != EOF);
-        {
+        while (str1 != EOF) {
+            printf("%c", str1);
             printf("%c", str1);
             str1 = fgetc(fp);
         }
         printf("\n\n");
-        fclose(fp);
     }
-            return 1;
-    }
+    fclose(fp);
+    return 1;
+}
 
 int entrada(ESTADO *e) {
     int x, y,z;
