@@ -76,13 +76,12 @@ int interpretador(ESTADO *e) {
         str1 = fgetc(fp);
         while (str1 != EOF) {
             printf("%c", str1);
-            printf("%c", str1);
             str1 = fgetc(fp);
         }
         printf("\n\n");
+        fclose(fp);
+        return 1;
     }
-    fclose(fp);
-    return 1;
 }
 
 int entrada(ESTADO *e) {
