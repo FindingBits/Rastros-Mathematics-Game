@@ -26,11 +26,11 @@ int interpretador(ESTADO *e) {
                     printf("(%d) ##Player1 (%d,%d)  ", (k++), (e->jogadas[i].jogador1.coluna),
                            (e->jogadas[i].jogador1.linha + 1));
 
-                }else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+                } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
                     printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
                 }
-            }else if (e->jogador_atual = 2) {
+            } else if (e->jogador_atual = 2) {
                 if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
                     printf("(%d) ##Player2 (%d,%d)  ", (k++), (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
@@ -81,6 +81,11 @@ int interpretador(ESTADO *e) {
         printf("\n\n");
         fclose(fp);
         return 1;
+    }
+    else if(strcmp(linha,"pos\n")==0){
+        int i;
+        printf("insira o numero da jogada:");
+        scanf("%d",&i);
     }
 }
 
