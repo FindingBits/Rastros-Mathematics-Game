@@ -33,3 +33,5 @@ int interpretador(ESTADO *e);
 \brief Tipo de interface para mostrar quem e o vencedor
 */
 int fim(int x);
+
+int my_getnbr(char str);

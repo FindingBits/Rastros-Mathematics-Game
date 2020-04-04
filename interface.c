@@ -18,7 +18,7 @@ int interpretador(ESTADO *e) {
         mostrar_tabuleiro(e);
     } else if (strcmp(linha, "movs\n") == 0) {
         int i, k;
-        k=1;
+        k = 1;
         printf("Movimentos:\n");
         for (i = 0; i < obter_numero_de_jogadas(e); i++) {
             if (e->jogador_atual = 1) {
@@ -81,11 +81,27 @@ int interpretador(ESTADO *e) {
         printf("\n\n");
         fclose(fp);
         return 1;
-    }
-    else if(strcmp(linha,"pos\n")==0){
-        int i;
-        printf("insira o numero da jogada:");
-        scanf("%d",&i);
+    } else if (strstr(linha, "pos") !=NULL) {
+        int i,nome,j;
+        i=0;
+        for(j=0;j!='\n';j++){
+            if(linha[j]!='0' && linha[j]!='1' && linha[j]!='2' && linha[j]!='3' && linha[j]!='4' && linha[j]!='5' && linha[j]!='6' && linha[j]!='7' && linha[j]!='8' && linha[j]!='9'){
+            linha[j]='+';
+            }
+        }
+        while(1){
+            if(linha[i]=='\n'){
+                linha[i]='\0';
+                break;
+            }
+            else i++;
+        }
+        nome=my_getnbr(linha);
+        if(nome>0 && nome<obter_numero_de_jogadas(e)){
+            e->num_jogadas=(nome+1);
+            pedir_entrada(e);
+        }
+        else printf("posicao invalida\n");
     }
 }
 
@@ -194,4 +210,25 @@ void pedir_entrada(ESTADO *e) {
     printf("# %d PL%d (%d)>", (e->num_jogadas + 1), e->jogador_atual, e->num_jogadas);
     scanf("%d", &e);
     interpretador(e);
+}
+
+int my_getnbr(char str)
+{
+    int result;
+    int puiss;
+
+    result = 0;
+    puiss = 1;
+    while (('-' == (str)) || ((str) == '+'))
+    {
+        if (str == '-')
+            puiss = puiss * -1;
+        str++;
+    }
+    while ((str >= '0') && (str <= '9'))
+    {
+        result = (result * 10) + ((*str) - '0');
+        str++;
+    }
+    return (result * puiss);
 }
