@@ -82,26 +82,22 @@ int interpretador(ESTADO *e) {
         fclose(fp);
         return 1;
     } else if (strstr(linha, "pos") !=NULL) {
-        int i,nome,j;
+        int i,nome,j,new[10];
         i=0;
         for(j=0;j!='\n';j++){
             if(linha[j]!='0' && linha[j]!='1' && linha[j]!='2' && linha[j]!='3' && linha[j]!='4' && linha[j]!='5' && linha[j]!='6' && linha[j]!='7' && linha[j]!='8' && linha[j]!='9'){
             linha[j]='+';
+            }else {
+                new[i]=linha[j];
+                i++;
             }
         }
-        while(1){
-            if(linha[i]=='\n'){
-                linha[i]='\0';
-                break;
-            }
-            else i++;
-        }
-        nome=my_getnbr(linha);
-        if(nome>0 && nome<obter_numero_de_jogadas(e)){
-            e->num_jogadas=(nome+1);
+        new[++i]='\0';
+        sscanf(new,"%d",&nome);
+        if(nome>0 && nome<obter_numero_de_jogadas(e)) {
+            e->num_jogadas = (nome*nome);
             pedir_entrada(e);
-        }
-        else printf("posicao invalida\n");
+        }else printf("posicao invalida\n");
     }
 }
 
@@ -227,7 +223,7 @@ int my_getnbr(char str)
     }
     while ((str >= '0') && (str <= '9'))
     {
-        result = (result * 10) + ((*str) - '0');
+        result = (result * 10) + ((str) - '0');
         str++;
     }
     return (result * puiss);
