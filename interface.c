@@ -96,8 +96,34 @@ int interpretador(ESTADO *e) {
         sscanf(new,"%d",&nome);
         if(nome>0 && nome<obter_numero_de_jogadas(e)) {
             e->num_jogadas = (nome*nome);
+            COORDENADA inicial;
+            inicial.linha = 3;
+            inicial.coluna = 4;
+            for(int i=0;i<8;i++) {
+                for (int j=0;j<8;j++) {
+                    e->tab[i][j] = 0;
+                }
+            }
+            e->tab[inicial.linha][inicial.coluna]='#';
+            int c=0;
+            for(int i=0;i<8;i++) {
+                for (int j=0;j<8;j++) {
+                    if(c>=e->num_jogadas) break;
+                    else if(i==(e->jogadas[c].jogador1.linha) && j==e->jogadas[c].jogador1.coluna){
+                        e->tab[i][j]=1;
+                        printf("deu1");
+                        c++;
+                    }
+                    else if(i==(e->jogadas[c].jogador2.linha) && j==e->jogadas[c].jogador2.coluna){
+                        e->tab[i][j]=2;
+                        printf("deu2");
+                        c++;
+                    }
+                }
+            }
+            mostrar_tabuleiro(e);
             pedir_entrada(e);
-        }else printf("posicao invalida\n");
+        }else printf("posicao invalida digite uma posicao entre 0 e %d\n",e->num_jogadas);
     }
 }
 
