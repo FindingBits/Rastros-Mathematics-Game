@@ -1,5 +1,5 @@
 //
-// Created by João Guedes on 10/03/2020.
+//
 //
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 typedef struct {
