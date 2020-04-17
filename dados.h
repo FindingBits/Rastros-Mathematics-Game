@@ -1,6 +1,3 @@
-//
-//
-//
 typedef enum {VAZIO, BRANCA, PRETA} CASA;
 typedef struct {
     int coluna;
