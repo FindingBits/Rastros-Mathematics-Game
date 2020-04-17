@@ -18,9 +18,9 @@ typedef struct {
     int num_jogadas; // valor inicial = 0 jogadas
     int jogador_atual; // valor inicial = 1 
 typedef struct LISTA { 
-  int data; 
-  struct LISTA *next; 
-}
+    int data; 
+    struct LISTA *next; 
+} // definiçao de LISTA
 ; 
 ESTADO;
 #ifndef GUIAO5_DADOS_H
