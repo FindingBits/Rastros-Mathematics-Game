@@ -32,3 +32,16 @@ int obter_numero_de_jogadas(ESTADO *estado){
 int obter_estado_casa(ESTADO *e, COORDENADA c){
 	return e->tab[c.linha][c.coluna];
 }
+
+// Cria uma lista vazia
+struct LISTA criar_lista();
+// Insere um valor na cabeça da lista
+struct LISTA insere_cabeca(struct LISTA L, void *valor);
+// Devolve a cabeça da lista
+void *devolve_cabeca(struct LISTA L);
+// Devolve a cauda da lista
+struct LISTA proximo(struct LISTA L);
+// Remove a cabeça da lista (libertando o espaço ocupado) e devolve a cauda
+struct LISTA remove_cabeca(struct LISTA L);
+// Devolve verdareiro se a lista é vazia
+int lista_esta_vazia(struct LISTA L);

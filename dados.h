@@ -17,7 +17,12 @@ typedef struct {
     JOGADAS jogadas; 	
     int num_jogadas; // valor inicial = 0 jogadas
     int jogador_atual; // valor inicial = 1 
-} ESTADO;
+typedef struct LISTA { 
+  int data; 
+  struct LISTA *next; 
+}
+; 
+ESTADO;
 #ifndef GUIAO5_DADOS_H
 #define GUIAO5_DADOS_H
 
