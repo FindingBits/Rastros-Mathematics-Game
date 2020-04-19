@@ -42,3 +42,14 @@
 
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/movs.PNG)
 
+### Retorno para Jogada
+ * Uso da função ``` pos ```
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/pos.PNG)
+
+### Jogo automático
+ * Uso da função ``` jog ```
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/jog1.PNG)
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/jog2.PNG)
+
