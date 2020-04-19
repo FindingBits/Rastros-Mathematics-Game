@@ -11,15 +11,16 @@ typedef JOGADA JOGADAS[32]; //32 pares de coordenadas
 typedef struct {
     CASA tab[8][8]; // 64 celulas do tabuleiro, indice e casas do jogo 
     COORDENADA ultima_jogada;
-    JOGADAS jogadas; 	
+    JOGADAS jogadas;
     int num_jogadas; // valor inicial = 0 jogadas
-    int jogador_atual; // valor inicial = 1 
+    int jogador_atual;
+}ESTADO;
+    // valor inicial = 1
 typedef struct LISTA { 
     int data; 
     struct LISTA *next; 
-} // definiçao de LISTA
-; 
-ESTADO;
+}LISTA; // definiçao de LISTA
+;
 #ifndef GUIAO5_DADOS_H
 #define GUIAO5_DADOS_H
 

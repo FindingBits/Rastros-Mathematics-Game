@@ -23,7 +23,7 @@ int interpretador(ESTADO *e) {
         for (i = 0; i < obter_numero_de_jogadas(e); i++) {
             if (e->jogador_atual = 1) {
                 if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
-                    printf("(%d) ##Player1 (%d,%d)  ", (k++), (e->jogadas[i].jogador1.coluna),
+                    printf("##Player1 (%d,%d)\n", (k++), (e->jogadas[i].jogador1.coluna),
                            (e->jogadas[i].jogador1.linha + 1));
 
                 } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
@@ -32,7 +32,7 @@ int interpretador(ESTADO *e) {
                 }
             } else if (e->jogador_atual = 2) {
                 if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
-                    printf("(%d) ##Player2 (%d,%d)  ", (k++), (e->jogadas[i].jogador2.coluna),
+                    printf("##Player2 (%d,%d)\n", (k++), (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
                 } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
                     printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
@@ -82,6 +82,7 @@ int interpretador(ESTADO *e) {
         fclose(fp);
         return 1;
     } else if (strstr(linha, "pos") !=NULL) {
+        // POS
         int i,nome,j,new[10];
         i=0;
         for(j=0;j!='\n';j++){
@@ -108,15 +109,15 @@ int interpretador(ESTADO *e) {
             int c=0;
             for(int i=0;i<8;i++) {
                 for (int j=0;j<8;j++) {
-                    if(c>=e->num_jogadas) break;
-                    else if(i==(e->jogadas[c].jogador1.linha) && j==e->jogadas[c].jogador1.coluna){
+                    if(c>=(e->num_jogadas*e->num_jogadas)) break;
+                    else if(i==(e->jogadas[c].jogador1.linha) && j==e->jogadas[c].jogador1.coluna && e->jogadas[c].jogador1.linha!=0 && e->jogadas[c].jogador1.coluna!=0){
                         e->tab[i][j]=1;
-                        printf("deu1");
+                        printf(" (1) Atualizou casa: i:%d j:%d |",i,j);
                         c++;
                     }
-                    else if(i==(e->jogadas[c].jogador2.linha) && j==e->jogadas[c].jogador2.coluna){
+                    else if(i==(e->jogadas[c].jogador2.linha) && j==e->jogadas[c].jogador2.coluna && e->jogadas[c].jogador2.linha!=0 && e->jogadas[c].jogador2.coluna!=0){
                         e->tab[i][j]=2;
-                        printf("deu2");
+                        printf(" (2) Atualizou casa: i:%d j:%d |",i,j);
                         c++;
                     }
                 }
