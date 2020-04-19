@@ -19,4 +19,8 @@ int podeJogar(ESTADO *e);
 \brief Função para atualizar jogadas
 */
 int updateJogadas(ESTADO *e, COORDENADA c);
+/**
+\brief Função para jogar auto
+*/
+int jogarAuto(ESTADO *e);
 #endif //GUIAO5_LOGICA_H
