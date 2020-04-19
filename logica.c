@@ -71,3 +71,17 @@ int jogar(ESTADO *e, COORDENADA c){
     }
     return 1;
 }
+void jogarAuto(ESTADO *e){
+    COORDENADA blank;
+    blank.linha=0;
+    blank.coluna=0;
+    if(e->jogador_atual==1 && (e->jogadas[e->num_jogadas].jogador1.linha!=blank.linha) && (e->jogadas[e->num_jogadas].jogador1.coluna!=blank.coluna) && (e->jogadas[e->num_jogadas].jogador1.linha+1==blank.linha)){
+        blank.linha=e->jogadas[e->num_jogadas].jogador1.linha+1;
+        blank.coluna=e->jogadas[e->num_jogadas].jogador1.coluna;
+        if(jogar(e,blank)) printf("Escolhido jogo automatico!\n");
+    }else if(e->jogador_atual==2 && (e->jogadas[e->num_jogadas].jogador2.linha!=blank.linha) && (e->jogadas[e->num_jogadas].jogador2.coluna!=blank.coluna) && (e->jogadas[e->num_jogadas].jogador2.linha+1==blank.linha)){
+        blank.linha=e->jogadas[e->num_jogadas].jogador2.linha+1;
+        blank.coluna=e->jogadas[e->num_jogadas].jogador2.coluna;
+        if(jogar(e,blank)) printf("Escolhido jogo automatico!\n");
+    }
+}

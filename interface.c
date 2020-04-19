@@ -124,7 +124,12 @@ int interpretador(ESTADO *e) {
             }
             mostrar_tabuleiro(e);
             pedir_entrada(e);
+
         }else printf("posicao invalida digite uma posicao entre 0 e %d\n",e->num_jogadas);
+    }else if(strcmp(linha, "jog\n") == 0) {
+        printf("entrou\n");
+        jogarAuto(e);
+        mostrar_tabuleiro(e);
     }
 }
 
