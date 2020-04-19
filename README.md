@@ -42,3 +42,8 @@
 
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/movs.PNG)
 
+### Voltar atrás no jogo
+ * Uso da função ``` movs ```
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/pos.PNG)
+
