@@ -23,4 +23,8 @@ int updateJogadas(ESTADO *e, COORDENADA c);
 \brief Função para jogar auto
 */
 int jogarAuto(ESTADO *e);
+/**
+\brief Função para jogar auto avançado
+*/
+int jogarAutoAdv(ESTADO *e);
 #endif //GUIAO5_LOGICA_H

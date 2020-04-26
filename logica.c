@@ -4,6 +4,7 @@
 int passouCasaMeio=0;
 #include "dados.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #define BUF_SIZE 1024
 int podeJogar(ESTADO *e, COORDENADA c){
@@ -35,6 +36,8 @@ int updateJogadas(ESTADO *e, COORDENADA c){
     blank.coluna=0;
     toDo.linha=c.linha;
     toDo.coluna=c.coluna;
+    e->ultima_jogada.linha=toDo.linha;
+    e->ultima_jogada.coluna=toDo.coluna;
     if(e->jogador_atual==1){
         e->jogadas[e->num_jogadas].jogador1=toDo;
         e->jogadas[e->num_jogadas].jogador2=blank;
@@ -71,17 +74,48 @@ int jogar(ESTADO *e, COORDENADA c){
     }
     return 1;
 }
-void jogarAuto(ESTADO *e){
+void jogarAutoAdv(ESTADO *e){
+    // jog 2 Minimax baseado no calculo de menor distancia possivel
     COORDENADA blank;
-    blank.linha=0;
-    blank.coluna=0;
-    if(e->jogador_atual==1 && (e->jogadas[e->num_jogadas].jogador1.linha!=blank.linha) && (e->jogadas[e->num_jogadas].jogador1.coluna!=blank.coluna) && (e->jogadas[e->num_jogadas].jogador1.linha+1==blank.linha)){
-        blank.linha=e->jogadas[e->num_jogadas].jogador1.linha+1;
-        blank.coluna=e->jogadas[e->num_jogadas].jogador1.coluna;
-        if(jogar(e,blank)) printf("Escolhido jogo automatico!\n");
-    }else if(e->jogador_atual==2 && (e->jogadas[e->num_jogadas].jogador2.linha!=blank.linha) && (e->jogadas[e->num_jogadas].jogador2.coluna!=blank.coluna) && (e->jogadas[e->num_jogadas].jogador2.linha+1==blank.linha)){
-        blank.linha=e->jogadas[e->num_jogadas].jogador2.linha+1;
-        blank.coluna=e->jogadas[e->num_jogadas].jogador2.coluna;
-        if(jogar(e,blank)) printf("Escolhido jogo automatico!\n");
+    blank.linha=e->ultima_jogada.linha;
+    blank.coluna=e->ultima_jogada.coluna-1;
+    if(7-blank.coluna>7-blank.linha){
+        blank.coluna=blank.coluna+1;
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{printf("Jogou!\n");}}}
+    }else if(7-blank.coluna<7-blank.linha){
+        blank.linha=blank.linha+1;
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{printf("Jogou!\n");}}}
+    }else/* igualdade*/{
+        blank.coluna=blank.coluna-1;
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){printf("Jogou!\n");}else{blank.linha=blank.linha-1;}if(jogar(e,blank)){printf("Jogou!\n");} }
+    }
+}
+void jogarAuto(ESTADO *e){
+    // jog 1 algoritmo simples de escolha de posicao aleatoria forcada sem inteligencia
+    COORDENADA blank;
+    blank.linha=e->ultima_jogada.linha;
+    blank.coluna=e->ultima_jogada.coluna-1;
+    int r=0;
+    // para baixo
+    while(1){
+        if(r==0){
+            printf("\n0\n");
+            blank.coluna=blank.coluna-1;
+            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+        }else if(r==1){
+            printf("\n1\n");
+            blank.linha=blank.linha+1;
+            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+        }else if(r==2){
+            printf("\n2\n");
+            blank.coluna=blank.coluna+1;
+            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+        }else if(r==3){
+            printf("\n3\n");
+            blank.linha=blank.linha-1;
+            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+        }
+        r++;
+        if(r==5) {printf("Erro na jogada auto!\n");break;}
     }
 }
