@@ -53,3 +53,8 @@
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/picture/jog1.PNG)
 ![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/picture/jog2.PNG)
 
+### Jogo automático avançado
+ * Uso da função ``` jog2 ```
+
+![ScreenShotGame](https://github.com/FrancesinhaMan/LA1PL3G4/blob/master/picture/jog2_1.PNG)
+
