@@ -1,4 +1,4 @@
-# Laboratorios-Algoritmia Jogo
+# LAPL3G04
 #### Um jogo de tabuleiro feito na linguagem C
 
 ## Turno
