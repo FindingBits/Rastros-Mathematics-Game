@@ -1,5 +1,5 @@
 # LAPL3G04
-#### Um jogo de tabuleiro feito na linguagem C
+#### Um jogo de tabuleiro Rastros feito na linguagem C
 
 ## Turno
   * PL3
@@ -13,6 +13,10 @@
   * [(@Miggs7) Miguel António Borges Tavares (a91690)](https://github.com/Miggs7)
     * Realizou os **dados** e uma parte do main
   * Em suma, existiu também uma **interajuda em cada componente**
+  
+## Conceito do Jogo
+O Rastros foi concebido em 1992. Trata-se de um jogo de posição em que os jogadores partilham as peças e efetuam uma corrida com uma “bola” na tentativa de marcar um “auto- golo” ou encurralar o adversário.
+Objetivo: Ser o primeiro a conseguir atingir a sua casa marcada com um 1 ou um 2 conforme a ordem de jogo.
 
 ## ScreenShots
  * Documentação extra encontra-se na pasta ``` doxygen.zip ```
