@@ -1,5 +1,5 @@
 # LAPL3G04
-#### Um jogo de tabuleiro Rastros feito na linguagem C
+#### O jogo de tabuleiro Rastros feito na linguagem C
 
 ## Turno
   * PL3
