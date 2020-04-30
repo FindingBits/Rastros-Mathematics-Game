@@ -9,12 +9,12 @@ int passouCasaMeio=0;
 #include <string.h>
 #define BUF_SIZE 1024
 int podeJogar(ESTADO *e, COORDENADA c){
-    printf("\nNavegador: %c, l+1: %d, l-1: %d, c+1: %d, c-1: %d\n",e->tab[c.linha][c.coluna],e->tab[c.linha+1][c.coluna],e->tab[c.linha-1][c.coluna],e->tab[c.linha][c.coluna+1],e->tab[c.linha][c.coluna-1]);
+    //printf("\nNavegador: %c, l+1: %d, l-1: %d, c+1: %d, c-1: %d\n",e->tab[c.linha][c.coluna],e->tab[c.linha+1][c.coluna],e->tab[c.linha-1][c.coluna],e->tab[c.linha][c.coluna+1],e->tab[c.linha][c.coluna-1]);
     if(e->tab[c.linha][c.coluna]=='#') return 0;
     if(e->tab[c.linha][c.coluna]!=0) return 0;
-    if(/* branca */(abs(e->ultima_jogada.linha-c.linha)==1)||(abs(e->ultima_jogada.coluna-c.coluna)==1)){
+    if(/* branca e preta (logica bivalente) */(abs(e->ultima_jogada.linha-c.linha)==1)||(abs(e->ultima_jogada.coluna-c.coluna)==1)){
         if(e->tab[c.linha][c.coluna]==0){
-            printf("\nDeteta Branca");
+            printf("\nAutorizou jogada!");
             return 1;
         }
     }else return 0;

@@ -112,13 +112,17 @@ int interpretador(ESTADO *e) {
                     if(c>=(e->num_jogadas*e->num_jogadas)) break;
                     else if(i==(e->jogadas[c].jogador1.linha) && j==e->jogadas[c].jogador1.coluna && e->jogadas[c].jogador1.linha!=0 && e->jogadas[c].jogador1.coluna!=0){
                         e->tab[i][j]=1;
-                        printf(" (1) Atualizou casa: i:%d j:%d |",i,j);
+                        e->ultima_jogada.linha=i;
+                        e->ultima_jogada.coluna=j;
+                        //printf(" (1) Atualizou casa: i:%d j:%d |",i,j);
                         e->jogador_atual=2;
                         c++;
                     }
                     else if(i==(e->jogadas[c].jogador2.linha) && j==e->jogadas[c].jogador2.coluna && e->jogadas[c].jogador2.linha!=0 && e->jogadas[c].jogador2.coluna!=0){
                         e->tab[i][j]=2;
-                        printf(" (2) Atualizou casa: i:%d j:%d |",i,j);
+                        e->ultima_jogada.linha=i;
+                        e->ultima_jogada.coluna=j;
+                        //printf(" (2) Atualizou casa: i:%d j:%d |",i,j);
                         e->jogador_atual=1;
                         c++;
                     }
