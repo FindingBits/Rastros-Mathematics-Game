@@ -21,20 +21,20 @@ int interpretador(ESTADO *e) {
         k = 1;
         printf("Movimentos:\n");
         for (i = 0; i < obter_numero_de_jogadas(e); i++) {
-            if (e->jogador_atual = 1) {
-                if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
+            if (e->jogador_atual == 1) {
+                if (e->jogadas[i].jogador1.linha != 0) {
                     printf("##Player1 (%d,%d)\n", (k++), (e->jogadas[i].jogador1.coluna),
                            (e->jogadas[i].jogador1.linha + 1));
 
-                } else if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+                } else if (e->jogadas[i].jogador2.linha != 0) {
                     printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
                 }
-            } else if (e->jogador_atual = 2) {
-                if (e->jogadas[i].jogador2.linha != 0 && e->jogadas[i].jogador2.linha != 0) {
+            } else if (e->jogador_atual == 2) {
+                if (e->jogadas[i].jogador2.linha != 0) {
                     printf("##Player2 (%d,%d)\n", (k++), (e->jogadas[i].jogador2.coluna),
                            (e->jogadas[i].jogador2.linha + 1));
-                } else if (e->jogadas[i].jogador1.linha != 0 && e->jogadas[i].jogador1.linha != 0) {
+                } else if (e->jogadas[i].jogador1.linha != 0) {
                     printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
                            (e->jogadas[i].jogador1.linha + 1));
                 }
@@ -83,8 +83,8 @@ int interpretador(ESTADO *e) {
         return 1;
     } else if (strstr(linha, "pos") !=NULL) {
         // POS
-        int i,nome,j,new[10];
-        i=0;
+        int nome,new[10];
+        int i=0,j=0;
         for(j=0;j!='\n';j++){
             if(linha[j]!='0' && linha[j]!='1' && linha[j]!='2' && linha[j]!='3' && linha[j]!='4' && linha[j]!='5' && linha[j]!='6' && linha[j]!='7' && linha[j]!='8' && linha[j]!='9'){
             linha[j]='+';
@@ -94,14 +94,14 @@ int interpretador(ESTADO *e) {
             }
         }
         new[++i]='\0';
-        sscanf(new,"%d",&nome);
+        sscanf((const char *) new, "%d", &nome);
         if(nome>0 && nome<obter_numero_de_jogadas(e)) {
             e->num_jogadas = (nome*nome);
             COORDENADA inicial;
             inicial.linha = 3;
             inicial.coluna = 4;
-            for(int i=0;i<8;i++) {
-                for (int j=0;j<8;j++) {
+            for(i=0;i<8;i++) {
+                for (j=0;j<8;j++) {
                     e->tab[i][j] = 0;
                 }
             }
@@ -203,10 +203,10 @@ void mostrar_tabuleiro (ESTADO *e) {
             //se estivermos na primeira casa da linha
             if(j==8 && i==0){
                 printf( "%d | ", 2);
-                if(e->tab[i][j]==1) win=1;
+                if(e->tab[i][j]==1 || e->tab[i][j]==2) win=1;
             }else if(j==1 && i==7){
                 printf( "%d | ", 1);
-                if(e->tab[i][j]==2) win=2;
+                if(e->tab[i][j]==1 || e->tab[i][j]==2) win=2;
             }
 
             else if(j==0) printf("%d | ",i+1);
@@ -241,28 +241,8 @@ int fim(int x){
 }
 
 void pedir_entrada(ESTADO *e) {
+    int trash=0;
     printf("# %d PL%d (%d)>", (e->num_jogadas + 1), e->jogador_atual, e->num_jogadas);
-    scanf("%d", &e);
+    scanf("%d", &trash);
     interpretador(e);
-}
-
-int my_getnbr(char str)
-{
-    int result;
-    int puiss;
-
-    result = 0;
-    puiss = 1;
-    while (('-' == (str)) || ((str) == '+'))
-    {
-        if (str == '-')
-            puiss = puiss * -1;
-        str++;
-    }
-    while ((str >= '0') && (str <= '9'))
-    {
-        result = (result * 10) + ((str) - '0');
-        str++;
-    }
-    return (result * puiss);
 }
