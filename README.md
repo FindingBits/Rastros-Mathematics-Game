@@ -19,7 +19,7 @@ O Rastros foi concebido em 1992. Trata-se de um jogo de posição em que os joga
 Objetivo: Ser o primeiro a conseguir atingir a sua casa marcada com um 1 ou um 2 conforme a ordem de jogo.
 
 ## ScreenShots
- * Documentação extra encontra-se na pasta ``` doxygen.zip ```
+ * Documentação extra encontra-se na pasta ``` docs ```
 ### Tabuleiro
  * Captura do tabuleiro de jogo
  
