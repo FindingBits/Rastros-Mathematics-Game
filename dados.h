@@ -9,7 +9,7 @@ typedef struct {
 } JOGADA;
 typedef JOGADA JOGADAS[32]; //32 pares de coordenadas
 typedef struct {
-    CASA tab[9][9]; // indice e casas do jogo
+    CASA tab[9][9]; // indice e casas do jogo expandidos
     COORDENADA ultima_jogada;
     JOGADAS jogadas;
     int num_jogadas; // valor inicial = 0 jogadas
