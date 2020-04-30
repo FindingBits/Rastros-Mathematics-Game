@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="lista_8c" kind="file" language="C++">
+    <compoundname>lista.c</compoundname>
+    <includes refid="lista_8h" local="yes">lista.h</includes>
+    <includes local="no">stdlib.h</includes>
+    <includes local="no">stdio.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>dados.h</label>
+        <link refid="dados_8h_source"/>
+      </node>
+      <node id="4">
+        <label>stdlib.h</label>
+      </node>
+      <node id="1">
+        <label>lista.c</label>
+        <link refid="lista_8c"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>lista.h</label>
+        <link refid="lista_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>stdio.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lista_8c_1aad68b084eaf922bab937ff804c267ccb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node criar_lista</definition>
+        <argsstring>()</argsstring>
+        <name>criar_lista</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.c" line="8" column="6" bodyfile="lista.c" bodystart="8" bodyend="11"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8c_1a90fa2a96478cdea238a62d176a1813ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node insere_cabeca</definition>
+        <argsstring>(node *head, int valor)</argsstring>
+        <name>insere_cabeca</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.c" line="12" column="6" bodyfile="lista.c" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8c_1a099066e07ef551a241bbbe21a69ed2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* devolve_cabeca</definition>
+        <argsstring>(node *head)</argsstring>
+        <name>devolve_cabeca</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.c" line="16" column="6" bodyfile="lista.c" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8c_1adc3c72ba19f80cc26f517f73676fc092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node proximo</definition>
+        <argsstring>(node *head)</argsstring>
+        <name>proximo</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.c" line="21" column="6" bodyfile="lista.c" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8c_1abe996806ae982e97364f439af3505445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node remove_cabeca</definition>
+        <argsstring>(node **head)</argsstring>
+        <name>remove_cabeca</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> **</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.c" line="26" column="6" bodyfile="lista.c" bodystart="26" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8c_1a767952489dbf30fed1d3c8063c39d851" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int lista_esta_vazia</definition>
+        <argsstring>(node *head)</argsstring>
+        <name>lista_esta_vazia</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.c" line="33" column="5" bodyfile="lista.c" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>João<sp/>Guedes<sp/>on<sp/>19/04/2020.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;lista.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdlib.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdio.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>criar_lista(){</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>head<sp/>=<sp/>(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref>));</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>insere_cabeca(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>valor){</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;data<sp/>=<sp/>valor;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;next<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*devolve_cabeca(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>current<sp/>=<sp/>head;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>printf(</highlight><highlight class="stringliteral">&quot;%d\n&quot;</highlight><highlight class="normal">,<sp/>current-&gt;data);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>current<sp/>=<sp/>current-&gt;next;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>proximo(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head){</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;next<sp/>=<sp/>(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*)<sp/>malloc(</highlight><highlight class="keyword">sizeof</highlight><highlight class="normal">(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref>));</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;next-&gt;data<sp/>=<sp/>2;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>head-&gt;next-&gt;next<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>remove_cabeca(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>**<sp/>head){</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>retval<sp/>=<sp/>-1;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>next_node<sp/>=<sp/>NULL;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>next_node<sp/>=<sp/>(*head)-&gt;next;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>retval<sp/>=<sp/>(*head)-&gt;data;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>free(*head);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lista_esta_vazia(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*head){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(head<sp/>==<sp/>NULL)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>1;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="lista.c"/>
+  </compounddef>
+</doxygen>

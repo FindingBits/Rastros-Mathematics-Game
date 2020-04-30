@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="struct_e_s_t_a_d_o" kind="struct" language="C++" prot="public">
+    <compoundname>ESTADO</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_e_s_t_a_d_o_1ac8666ec38adeb89763675ff0921405df" prot="public" static="no" mutable="no">
+        <type>CASA</type>
+        <definition>CASA tab[9][9]</definition>
+        <argsstring>[9][9]</argsstring>
+        <name>tab</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dados.h" line="12" column="10" bodyfile="dados.h" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_s_t_a_d_o_1a88f042640b66b99525b1c9d830893177" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_c_o_o_r_d_e_n_a_d_a" kindref="compound">COORDENADA</ref></type>
+        <definition>COORDENADA ultima_jogada</definition>
+        <argsstring></argsstring>
+        <name>ultima_jogada</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dados.h" line="13" column="16" bodyfile="dados.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_s_t_a_d_o_1a0e44ff9e999c7573f4b87cb8a7aba6c2" prot="public" static="no" mutable="no">
+        <type>JOGADAS</type>
+        <definition>JOGADAS jogadas</definition>
+        <argsstring></argsstring>
+        <name>jogadas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dados.h" line="14" column="13" bodyfile="dados.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_s_t_a_d_o_1a06af1e846368d0fc9525e78f4d86faa3" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int num_jogadas</definition>
+        <argsstring></argsstring>
+        <name>num_jogadas</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dados.h" line="15" column="9" bodyfile="dados.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_e_s_t_a_d_o_1a6f3701db06762a60333719d94aa4d28c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int jogador_atual</definition>
+        <argsstring></argsstring>
+        <name>jogador_atual</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="dados.h" line="16" column="9" bodyfile="dados.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="3">
+        <label>JOGADA</label>
+        <link refid="struct_j_o_g_a_d_a"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>jogador1</edgelabel>
+          <edgelabel>jogador2</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>COORDENADA</label>
+        <link refid="struct_c_o_o_r_d_e_n_a_d_a"/>
+      </node>
+      <node id="1">
+        <label>ESTADO</label>
+        <link refid="struct_e_s_t_a_d_o"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>ultima_jogada</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>jogadas</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="dados.h" line="11" column="1" bodyfile="dados.h" bodystart="11" bodyend="17"/>
+    <listofallmembers>
+      <member refid="struct_e_s_t_a_d_o_1a0e44ff9e999c7573f4b87cb8a7aba6c2" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>jogadas</name></member>
+      <member refid="struct_e_s_t_a_d_o_1a6f3701db06762a60333719d94aa4d28c" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>jogador_atual</name></member>
+      <member refid="struct_e_s_t_a_d_o_1a06af1e846368d0fc9525e78f4d86faa3" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>num_jogadas</name></member>
+      <member refid="struct_e_s_t_a_d_o_1ac8666ec38adeb89763675ff0921405df" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>tab</name></member>
+      <member refid="struct_e_s_t_a_d_o_1a88f042640b66b99525b1c9d830893177" prot="public" virt="non-virtual"><scope>ESTADO</scope><name>ultima_jogada</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

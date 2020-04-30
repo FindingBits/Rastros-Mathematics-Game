@@ -1,0 +1,175 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.18">
+  <compounddef id="lista_8h" kind="file" language="C++">
+    <compoundname>lista.h</compoundname>
+    <includes refid="dados_8h" local="yes">dados.h</includes>
+    <includedby refid="lista_8c" local="yes">lista.c</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>dados.h</label>
+        <link refid="dados_8h_source"/>
+      </node>
+      <node id="1">
+        <label>lista.h</label>
+        <link refid="lista_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="lista_8h_1aa2a51855f1faca3c483f28cfa29d7516" prot="public" static="no">
+        <name>JOGO_node_H</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="6" column="9" bodyfile="lista.h" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="lista_8h_1a070d2ce7b6bb7e5c05602aa8c308d0c4" prot="public" static="no">
+        <name>NULL</name>
+        <initializer>( (void *) 0)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="7" column="9" bodyfile="lista.h" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="lista_8h_1a5dc35398d4aa807323c96bbe26af320d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node criar_node</definition>
+        <argsstring>()</argsstring>
+        <name>criar_node</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="9" column="6" declfile="lista.h" declline="9" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8h_1a90fa2a96478cdea238a62d176a1813ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node insere_cabeca</definition>
+        <argsstring>(node *head, int valor)</argsstring>
+        <name>insere_cabeca</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>valor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="11" column="6" bodyfile="lista.c" bodystart="12" bodyend="15" declfile="lista.h" declline="11" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8h_1a099066e07ef551a241bbbe21a69ed2ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void *</type>
+        <definition>void* devolve_cabeca</definition>
+        <argsstring>(node *head)</argsstring>
+        <name>devolve_cabeca</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="13" column="6" bodyfile="lista.c" bodystart="16" bodyend="20" declfile="lista.h" declline="13" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8h_1adc3c72ba19f80cc26f517f73676fc092" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node proximo</definition>
+        <argsstring>(node *head)</argsstring>
+        <name>proximo</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="15" column="6" bodyfile="lista.c" bodystart="21" bodyend="25" declfile="lista.h" declline="15" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8h_1abe996806ae982e97364f439af3505445" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref></type>
+        <definition>node remove_cabeca</definition>
+        <argsstring>(node **head)</argsstring>
+        <name>remove_cabeca</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> **</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="17" column="6" bodyfile="lista.c" bodystart="26" bodyend="32" declfile="lista.h" declline="17" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="lista_8h_1a3cd0773a797a5afab08e26a154686f1b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int node_esta_vazia</definition>
+        <argsstring>(node *head)</argsstring>
+        <name>node_esta_vazia</name>
+        <param>
+          <type><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref> *</type>
+          <declname>head</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="lista.h" line="19" column="5" declfile="lista.h" declline="19" declcolumn="5"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Created<sp/>by<sp/>João<sp/>Guedes<sp/>on<sp/>19/04/2020.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;dados.h&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>JOGO_node_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>JOGO_node_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NULL<sp/>(<sp/>(void<sp/>*)<sp/>0)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Cria<sp/>uma<sp/>node<sp/>vazia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>criar_node();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Insere<sp/>um<sp/>valor<sp/>na<sp/>cabeça<sp/>da<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>insere_cabeca(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>valor);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Devolve<sp/>a<sp/>cabeça<sp/>da<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>*devolve_cabeca(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Devolve<sp/>a<sp/>cauda<sp/>da<sp/>node</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>proximo(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Remove<sp/>a<sp/>cabeça<sp/>da<sp/>node<sp/>(libertando<sp/>o<sp/>espaço<sp/>ocupado)<sp/>e<sp/>devolve<sp/>a<sp/>cauda</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>remove_cabeca(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>**<sp/>head);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Devolve<sp/>verdareiro<sp/>se<sp/>a<sp/>node<sp/>é<sp/>vazia</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>node_esta_vazia(<ref refid="struct_l_i_s_t_a" kindref="compound">node</ref><sp/>*<sp/>head);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//JOGO_node_H</highlight></codeline>
+    </programlisting>
+    <location file="lista.h"/>
+  </compounddef>
+</doxygen>
