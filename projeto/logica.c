@@ -16,7 +16,8 @@ int podeJogar(ESTADO *e, COORDENADA c){
             printf("\nAutorizou jogada!");
             return 1;
         }
-    }else return 0;
+    }
+    return 0;
 }
 int updateJogadas(ESTADO *e, COORDENADA c){
     COORDENADA toDo;

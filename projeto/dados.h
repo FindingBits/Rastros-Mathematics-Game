@@ -21,7 +21,6 @@ typedef struct LISTA {
     int data; 
     struct LISTA *next; 
 }node; // definiçao de LISTA
-;
 #ifndef GUIAO5_DADOS_H
 #define GUIAO5_DADOS_H
 

@@ -17,26 +17,21 @@ int interpretador(ESTADO *e) {
         jogar(e, coord);
         mostrar_tabuleiro(e);
     } else if (strcmp(linha, "movs\n") == 0) {
-        int i, k;
-        k = 1;
+        int i;
         printf("Movimentos:\n");
         for (i = 0; i < obter_numero_de_jogadas(e); i++) {
             if (e->jogador_atual == 1) {
                 if (e->jogadas[i].jogador1.linha != 0) {
-                    printf("##Player1 (%d,%d)\n", (k++), (e->jogadas[i].jogador1.coluna),
-                           (e->jogadas[i].jogador1.linha + 1));
+                    printf("Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),(e->jogadas[i].jogador1.linha + 1));
 
                 } else if (e->jogadas[i].jogador2.linha != 0) {
-                    printf("##Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),
-                           (e->jogadas[i].jogador2.linha + 1));
+                    printf("Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),(e->jogadas[i].jogador2.linha + 1));
                 }
             } else if (e->jogador_atual == 2) {
                 if (e->jogadas[i].jogador2.linha != 0) {
-                    printf("##Player2 (%d,%d)\n", (k++), (e->jogadas[i].jogador2.coluna),
-                           (e->jogadas[i].jogador2.linha + 1));
+                    printf("Player2 (%d,%d)\n", (e->jogadas[i].jogador2.coluna),(e->jogadas[i].jogador2.linha + 1));
                 } else if (e->jogadas[i].jogador1.linha != 0) {
-                    printf("##Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),
-                           (e->jogadas[i].jogador1.linha + 1));
+                    printf("Player1 (%d,%d)\n", (e->jogadas[i].jogador1.coluna),(e->jogadas[i].jogador1.linha + 1));
                 }
             }
         }
@@ -145,6 +140,7 @@ int interpretador(ESTADO *e) {
         jogarAutoAdv(e);
         mostrar_tabuleiro(e);
     }
+    return 1;
 }
 
 int entrada(ESTADO *e) {
