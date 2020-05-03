@@ -9,10 +9,6 @@ CMakeFiles/jogo.dir/interface.c.obj: ../interface.c
 CMakeFiles/jogo.dir/interface.c.obj: ../interface.h
 CMakeFiles/jogo.dir/interface.c.obj: ../logica.h
 
-CMakeFiles/jogo.dir/lista.c.obj: ../dados.h
-CMakeFiles/jogo.dir/lista.c.obj: ../lista.c
-CMakeFiles/jogo.dir/lista.c.obj: ../lista.h
-
 CMakeFiles/jogo.dir/logica.c.obj: ../dados.h
 CMakeFiles/jogo.dir/logica.c.obj: ../logica.c
 

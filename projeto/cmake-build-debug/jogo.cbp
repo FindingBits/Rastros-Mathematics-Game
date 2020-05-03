@@ -86,12 +86,6 @@
 		<Unit filename="C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/interface.h">
 			<Option target="jogo"/>
 		</Unit>
-		<Unit filename="C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/lista.c">
-			<Option target="jogo"/>
-		</Unit>
-		<Unit filename="C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/lista.h">
-			<Option target="jogo"/>
-		</Unit>
 		<Unit filename="C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/logica.c">
 			<Option target="jogo"/>
 		</Unit>

@@ -3,4 +3,4 @@ project(jogo C)
 
 set(CMAKE_C_STANDARD 99)
 
-add_executable(jogo main.c interface.c interface.h logica.c logica.h dados.c dados.h lista.c lista.h)
+add_executable(jogo main.c interface.c interface.h logica.c logica.h dados.c dados.h)

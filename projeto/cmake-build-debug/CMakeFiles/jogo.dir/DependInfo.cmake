@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/dados.c" "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/jogo.dir/dados.c.obj"
   "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/interface.c" "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/jogo.dir/interface.c.obj"
-  "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/lista.c" "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/jogo.dir/lista.c.obj"
   "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/logica.c" "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/jogo.dir/logica.c.obj"
   "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/main.c" "C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/jogo.dir/main.c.obj"
   )

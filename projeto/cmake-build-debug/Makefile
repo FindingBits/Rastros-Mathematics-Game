@@ -176,33 +176,6 @@ interface.c.s:
 	$(MAKE) -f CMakeFiles\jogo.dir\build.make CMakeFiles/jogo.dir/interface.c.s
 .PHONY : interface.c.s
 
-lista.obj: lista.c.obj
-
-.PHONY : lista.obj
-
-# target to build an object file
-lista.c.obj:
-	$(MAKE) -f CMakeFiles\jogo.dir\build.make CMakeFiles/jogo.dir/lista.c.obj
-.PHONY : lista.c.obj
-
-lista.i: lista.c.i
-
-.PHONY : lista.i
-
-# target to preprocess a source file
-lista.c.i:
-	$(MAKE) -f CMakeFiles\jogo.dir\build.make CMakeFiles/jogo.dir/lista.c.i
-.PHONY : lista.c.i
-
-lista.s: lista.c.s
-
-.PHONY : lista.s
-
-# target to generate assembly for a file
-lista.c.s:
-	$(MAKE) -f CMakeFiles\jogo.dir\build.make CMakeFiles/jogo.dir/lista.c.s
-.PHONY : lista.c.s
-
 logica.obj: logica.c.obj
 
 .PHONY : logica.obj
@@ -272,9 +245,6 @@ help:
 	@echo ... interface.obj
 	@echo ... interface.i
 	@echo ... interface.s
-	@echo ... lista.obj
-	@echo ... lista.i
-	@echo ... lista.s
 	@echo ... logica.obj
 	@echo ... logica.i
 	@echo ... logica.s
