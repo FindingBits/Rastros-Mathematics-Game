@@ -14,6 +14,7 @@ typedef struct {
     JOGADAS jogadas;
     int num_jogadas; // valor inicial = 0 jogadas
     int jogador_atual;
+    int passouBordas;
 }ESTADO;
     // valor inicial = 1
 typedef struct LISTA { 

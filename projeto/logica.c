@@ -1,7 +1,6 @@
 //
 // Created by João Guedes on 10/03/2020.
 //
-int passouCasaMeio=0;
 #include "dados.h"
 #include <stdio.h>
 #include <math.h>
@@ -11,8 +10,8 @@ int passouCasaMeio=0;
 int podeJogar(ESTADO *e, COORDENADA c){
     //printf("\nNavegador: %c, l+1: %d, l-1: %d, c+1: %d, c-1: %d\n",e->tab[c.linha][c.coluna],e->tab[c.linha+1][c.coluna],e->tab[c.linha-1][c.coluna],e->tab[c.linha][c.coluna+1],e->tab[c.linha][c.coluna-1]);
     if(e->tab[c.linha][c.coluna]=='#') return 0;
-    if((e->tab[c.linha][c.coluna]==1 || e->tab[c.linha][c.coluna]==2)){}else{if(e->tab[c.linha][c.coluna]!=0) return 0;}
-    if(/* branca e preta (logica bivalente) */(abs(e->ultima_jogada.linha-c.linha)==1)||(abs(e->ultima_jogada.coluna-c.coluna)==1)){
+    if(e->tab[c.linha][c.coluna]!=0) return 0;
+    if(((abs(e->ultima_jogada.linha-c.linha)==1)&&(abs(e->ultima_jogada.coluna-c.coluna)==1)) || ((abs(e->ultima_jogada.linha-c.linha)==0)&&(abs(e->ultima_jogada.coluna-c.coluna)==1)) || ((abs(e->ultima_jogada.linha-c.linha)==1)&&(abs(e->ultima_jogada.coluna-c.coluna)==0))){
         if(e->tab[c.linha][c.coluna]==0){
             printf("\nAutorizou jogada!");
             return 1;
@@ -96,12 +95,12 @@ void jogarAutoAdv(ESTADO *e){
     if(e->jogador_atual==1){
         for(int i = 3; i>=0; i++) {
             if(out==1) break;
-            for(int j = 4; i>=0; i++){
+            for(int j = 4; j>=0; j++){
                 if(e->tab[i][j] == 0) {
-                    COORDENADA blank;
-                    blank.linha=i;
-                    blank.coluna=j;
-                    if(jogar(e,blank)){
+                    COORDENADA c;
+                    c.linha=i;
+                    c.coluna=j;
+                    if(jogar(e,c) ){
                         out=1;
                         break;
                     }
@@ -111,12 +110,12 @@ void jogarAutoAdv(ESTADO *e){
     }else{
         for(int i = 3; i < 9; i++) {
             if(out==1) break;
-            for(int j = 4; i < 9; i++){
+            for(int j = 4; j < 9; j++){
                 if(e->tab[i][j] == 0) {
-                    COORDENADA blank;
-                    blank.linha=i;
-                    blank.coluna=j;
-                    if(jogar(e,blank)){
+                    COORDENADA c;
+                    c.linha=i;
+                    c.coluna=j;
+                    if(jogar(e,c)){
                         out=1;
                         break;
                     }
