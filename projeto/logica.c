@@ -101,6 +101,6 @@ void jogarAutoAdv(ESTADO *e){
         blank.linha=blank.linha+1;
         if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
     }else/* igualdade*/{
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){}else{blank.linha=blank.linha-1;}if(jogar(e,blank)){printf("Jogou!\n");}else{jogarAuto(e);} }
+        jogarAuto(e);
     }
 }

@@ -95,7 +95,7 @@ int interpretador(ESTADO *e) {
         }
         new[++i]='\0';
         sscanf((const char *) new, "%d", &nome);
-        if(nome>0 && nome<obter_numero_de_jogadas(e)) {
+        if(nome>=0 && nome<obter_numero_de_jogadas(e)) {
             e->num_jogadas = (nome*nome);
             COORDENADA inicial;
             inicial.linha = 3;
@@ -127,6 +127,10 @@ int interpretador(ESTADO *e) {
                         c++;
                     }
                 }
+            }
+            if(nome==0){
+                e->ultima_jogada.linha=3;
+                e->ultima_jogada.coluna=4;
             }
             mostrar_tabuleiro(e);
             pedir_entrada(e);
