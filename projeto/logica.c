@@ -11,7 +11,7 @@ int passouCasaMeio=0;
 int podeJogar(ESTADO *e, COORDENADA c){
     //printf("\nNavegador: %c, l+1: %d, l-1: %d, c+1: %d, c-1: %d\n",e->tab[c.linha][c.coluna],e->tab[c.linha+1][c.coluna],e->tab[c.linha-1][c.coluna],e->tab[c.linha][c.coluna+1],e->tab[c.linha][c.coluna-1]);
     if(e->tab[c.linha][c.coluna]=='#') return 0;
-    if(e->tab[c.linha][c.coluna]!=0) return 0;
+    if(e->tab[c.linha][c.coluna]==1 || e->tab[c.linha][c.coluna]==2){}else{if(e->tab[c.linha][c.coluna]!=0) return 0;}
     if(/* branca e preta (logica bivalente) */(abs(e->ultima_jogada.linha-c.linha)==1)||(abs(e->ultima_jogada.coluna-c.coluna)==1)){
         if(e->tab[c.linha][c.coluna]==0){
             printf("\nAutorizou jogada!");
@@ -71,13 +71,13 @@ void jogarAutoAdv(ESTADO *e){
     blank.coluna=e->ultima_jogada.coluna-1;
     if(7-blank.coluna>7-blank.linha){
         blank.coluna=blank.coluna+1;
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{printf("Jogou!\n");}}}
-    }else if(7-blank.coluna<7-blank.linha){
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
+    }if(7-blank.coluna<7-blank.linha){
         blank.linha=blank.linha+1;
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{printf("Jogou!\n");}}}
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
     }else/* igualdade*/{
         blank.coluna=blank.coluna-1;
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){printf("Jogou!\n");}else{blank.linha=blank.linha-1;}if(jogar(e,blank)){printf("Jogou!\n");} }
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){}else{blank.linha=blank.linha-1;}if(jogar(e,blank)){printf("Jogou!\n");} }
     }
 }
 void jogarAuto(ESTADO *e){
@@ -88,19 +88,15 @@ void jogarAuto(ESTADO *e){
     int r=0;
     while(1){
         if(r==0){
-            printf("\n0\n");
             blank.coluna=blank.coluna-1;
             if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
         }else if(r==1){
-            printf("\n1\n");
             blank.linha=blank.linha+1;
             if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
         }else if(r==2){
-            printf("\n2\n");
             blank.coluna=blank.coluna+1;
             if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
         }else if(r==3){
-            printf("\n3\n");
             blank.linha=blank.linha-1;
             if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
         }
