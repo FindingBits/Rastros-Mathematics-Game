@@ -42,7 +42,7 @@ int updateJogadas(ESTADO *e, COORDENADA c){
 
 int jogar(ESTADO *e, COORDENADA c){
     c.coluna=c.coluna+1;
-    //printf("Foi tentada uma jogada nas coordenadas: \nLinha:%d\nColuna:%d",c.linha,c.coluna);
+    printf("Foi tentada uma jogada nas coordenadas: \nLinha:%d\nColuna:%d",c.linha,c.coluna);
     if((c.linha>0 && c.linha<=9) && (c.coluna>0 && c.coluna<=9)  && podeJogar(e,c)){
         if(e->jogador_atual==1){
             e->tab[c.linha][c.coluna] = 1;
@@ -89,16 +89,16 @@ void jogarAuto(ESTADO *e){
     while(1){
         if(r==0){
             blank.coluna=blank.coluna-1;
-            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+            if(blank.coluna>=0 && blank.linha>=0){if(jogar(e,blank)) break;}
         }else if(r==1){
             blank.linha=blank.linha+1;
-            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+            if(blank.coluna>=0 && blank.linha>=0){if(jogar(e,blank)) break;}
         }else if(r==2){
             blank.coluna=blank.coluna+1;
-            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+            if(blank.coluna>=0 && blank.linha>=0){if(jogar(e,blank)) break;}
         }else if(r==3){
             blank.linha=blank.linha-1;
-            if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)) break;}
+            if(blank.coluna>=0 && blank.linha>=0){if(jogar(e,blank)) break;}
         }
         r++;
         if(r==5) {printf("Erro na jogada auto!\n");break;}
