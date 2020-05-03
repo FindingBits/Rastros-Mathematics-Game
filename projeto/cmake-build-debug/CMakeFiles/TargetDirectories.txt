@@ -1,0 +1,3 @@
+C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/jogo.dir
+C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/cmake-build-debug/CMakeFiles/rebuild_cache.dir

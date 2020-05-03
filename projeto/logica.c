@@ -43,7 +43,7 @@ int updateJogadas(ESTADO *e, COORDENADA c){
 int jogar(ESTADO *e, COORDENADA c){
     c.coluna=c.coluna+1;
     //printf("Foi tentada uma jogada nas coordenadas: \nLinha:%d\nColuna:%d",c.linha,c.coluna);
-    if((c.linha>0 && c.linha<=8) && (c.coluna>0 && c.coluna<=8)  && podeJogar(e,c)){
+    if((c.linha>0 && c.linha<=9) && (c.coluna>0 && c.coluna<=9)  && podeJogar(e,c)){
         if(e->jogador_atual==1){
             e->tab[c.linha][c.coluna] = 1;
         }else if (e->jogador_atual==2){

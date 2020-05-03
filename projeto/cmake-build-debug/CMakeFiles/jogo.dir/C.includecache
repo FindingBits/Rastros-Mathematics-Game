@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/dados.h
+
+C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/logica.c
+dados.h
+C:/Users/Guedes/Documents/GitHub/LA1PL3G4/projeto/dados.h
+stdio.h
+-
+math.h
+-
+stdlib.h
+-
+string.h
+-
+

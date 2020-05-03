@@ -1,7 +1,7 @@
 //
 // Created by João Guedes on 19/04/2020.
 //
-#include "dados.h";
+#include "dados.h"
 #ifndef JOGO_node_H
 #define JOGO_node_H
 #define NULL ( (void *) 0)
