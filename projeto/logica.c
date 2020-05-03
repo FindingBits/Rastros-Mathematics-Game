@@ -143,7 +143,12 @@ void jogarAutoAdv(ESTADO *e){
 int minimax(int profundidade, int caminho, int linha, int coluna, int tab[9][9],ESTADO *e) {
         int out=0, ci,di,es,ba;
         if(profundidade==0) return -1;
-        if(tab[linha][coluna]==e->jogador_atual) return caminho;
+        if(e->jogador_atual==1){
+            if(linha==0 && coluna==8) return caminho;
+        }
+    if(e->jogador_atual==2){
+        if(linha==7 && coluna==0) return caminho;
+    }
         if(linha>7 || linha<0 || coluna>8 || coluna<0) return -1;
         if(tab[linha][coluna]!=0) return -1;
         tab[linha][coluna]=e->jogador_atual;
