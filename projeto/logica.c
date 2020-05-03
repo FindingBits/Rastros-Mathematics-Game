@@ -90,23 +90,38 @@ void jogarAuto(ESTADO *e){
     }
 }
 void jogarAutoAdv(ESTADO *e){
-    // jog 2 Minimax baseado no calculo de menor distancia possivel
-    COORDENADA blank;
-    blank.linha=e->ultima_jogada.linha;
-    blank.coluna=e->ultima_jogada.coluna-1;
-    if((7-blank.coluna>7-blank.linha)){
-        blank.coluna=blank.linha+1;
-        if(blank.coluna>=0 && blank.linha>=0  && e->tab[blank.linha][blank.coluna]==0){if(jogar(e,blank)){{}}else/*caso erro*/{e->ultima_jogada.linha+=1;jogarAuto(e);}}
-    }if((7-blank.coluna<7-blank.linha)){
-        blank.linha=blank.coluna+1;
-        if(blank.coluna>=0 && blank.linha>=0 && e->tab[blank.linha][blank.coluna]==0){if(jogar(e,blank)){{}}else/*caso erro*/{e->ultima_jogada.linha-=1;jogarAuto(e);}}
-    }if((0+blank.coluna<0+blank.linha)){
-        blank.linha=blank.coluna-1;
-        if(blank.coluna>=0 && blank.linha>=0  && e->tab[blank.linha][blank.coluna]==0){if(jogar(e,blank)){{}}else/*caso erro*/{e->ultima_jogada.coluna+=1;jogarAuto(e);}}
-    }if(0+blank.coluna>0+blank.linha ){
-        blank.coluna=blank.linha-1;
-        if(blank.coluna>=0 && blank.linha>=0  && e->tab[blank.linha][blank.coluna]==0){if(jogar(e,blank)){{}}else/*caso erro*/{e->ultima_jogada.coluna-=1;jogarAuto(e);}}
-    }else/* igualdade*/{
-        jogarAuto(e);
+    int out=0;
+    // inicio seria sempre na casa mae de partida
+    // verifica desde o canto ate a casa mae para jogar
+    if(e->jogador_atual==1){
+        for(int i = 3; i>=0; i++) {
+            if(out==1) break;
+            for(int j = 4; i>=0; i++){
+                if(e->tab[i][j] == 0) {
+                    COORDENADA blank;
+                    blank.linha=i;
+                    blank.coluna=j;
+                    if(jogar(e,blank)){
+                        out=1;
+                        break;
+                    }
+                }
+            }
+        }
+    }else{
+        for(int i = 3; i < 9; i++) {
+            if(out==1) break;
+            for(int j = 4; i < 9; i++){
+                if(e->tab[i][j] == 0) {
+                    COORDENADA blank;
+                    blank.linha=i;
+                    blank.coluna=j;
+                    if(jogar(e,blank)){
+                        out=1;
+                        break;
+                    }
+                }
+            }
+        }
     }
 }
