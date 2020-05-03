@@ -64,22 +64,7 @@ int jogar(ESTADO *e, COORDENADA c){
     }
     return 1;
 }
-void jogarAutoAdv(ESTADO *e){
-    // jog 2 Minimax baseado no calculo de menor distancia possivel
-    COORDENADA blank;
-    blank.linha=e->ultima_jogada.linha;
-    blank.coluna=e->ultima_jogada.coluna-1;
-    if(7-blank.coluna>7-blank.linha){
-        blank.coluna=blank.coluna+1;
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
-    }if(7-blank.coluna<7-blank.linha){
-        blank.linha=blank.linha+1;
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
-    }else/* igualdade*/{
-        blank.coluna=blank.coluna-1;
-        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){}else{blank.linha=blank.linha-1;}if(jogar(e,blank)){printf("Jogou!\n");} }
-    }
-}
+
 void jogarAuto(ESTADO *e){
     // jog 1 algoritmo simples de escolha de posicao aleatoria forcada sem inteligencia
     COORDENADA blank;
@@ -102,5 +87,20 @@ void jogarAuto(ESTADO *e){
         }
         r++;
         if(r==5) {printf("Erro na jogada auto!\n");break;}
+    }
+}
+void jogarAutoAdv(ESTADO *e){
+    // jog 2 Minimax baseado no calculo de menor distancia possivel
+    COORDENADA blank;
+    blank.linha=e->ultima_jogada.linha;
+    blank.coluna=e->ultima_jogada.coluna-1;
+    if(7-blank.coluna>7-blank.linha){
+        blank.coluna=blank.coluna+1;
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
+    }if(7-blank.coluna<7-blank.linha){
+        blank.linha=blank.linha+1;
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){{}}}
+    }else/* igualdade*/{
+        if(blank.coluna>0 && blank.linha>0){if(jogar(e,blank)){}else{blank.linha=blank.linha-1;}if(jogar(e,blank)){printf("Jogou!\n");}else{jogarAuto(e);} }
     }
 }
