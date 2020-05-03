@@ -14,7 +14,7 @@ int jogar(ESTADO *estado, COORDENADA c);
 /**
 \brief Função para saber se pode jogar no tabuleiro na posição escolhida
 */
-int podeJogar(ESTADO *e);
+int podeJogar(ESTADO *e, COORDENADA c);
 /**
 \brief Função para atualizar jogadas
 */

@@ -3,6 +3,8 @@
 
 ## Turno
   * PL3
+## Curso
+  * LCC
 ## Número do Grupo
   * 4
 ## Elementos 

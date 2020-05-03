@@ -30,8 +30,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b32c6d66-b3a5-42b7-bbb2-1888f7aeebb2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/lista.h" beforeDir="false" afterPath="$PROJECT_DIR$/lista.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logica.c" beforeDir="false" afterPath="$PROJECT_DIR$/logica.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logica.h" beforeDir="false" afterPath="$PROJECT_DIR$/logica.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/Torneio-master" />
   </component>
   <component name="RunManager">
     <configuration name="jogo" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="jogo" TARGET_NAME="jogo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="jogo" RUN_TARGET_NAME="jogo">
@@ -76,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1588501400920</updated>
       <workItem from="1588501403013" duration="67000" />
-      <workItem from="1588501541943" duration="1399000" />
+      <workItem from="1588501541943" duration="4677000" />
     </task>
     <servers />
   </component>
@@ -152,6 +152,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1588505610507">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588505610507" />
     <state width="1493" height="170" key="GridCell.Tab.0.bottom" timestamp="1588502979528">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
