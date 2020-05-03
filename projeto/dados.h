@@ -30,4 +30,5 @@ int obter_jogador_atual(ESTADO *estado);
 int obter_numero_de_jogadas(ESTADO *estado);
 int obter_estado_casa(ESTADO *e, COORDENADA c);
 COORDENADA obter_ultima_jogada(ESTADO *e);
+int minimax(int profundidade, int caminho, int linha, int coluna, int tab[9][9],ESTADO *e);
 
