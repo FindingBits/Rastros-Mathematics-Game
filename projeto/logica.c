@@ -93,7 +93,7 @@ void jogarAuto(ESTADO *e){
     }
 }
 void jogarAutoAdv(ESTADO *e){
-    int out=0, ci,di,es,ba,i,j,tab[9][9];
+    int ci,di,es,ba,i,j,tab[9][9];
     COORDENADA c;
     // inicio seria sempre na casa mae de partida
     // verifica desde o canto ate a casa mae para jogar
@@ -141,7 +141,7 @@ void jogarAutoAdv(ESTADO *e){
 }
 
 int minimax(int profundidade, int caminho, int linha, int coluna, int tab[9][9],ESTADO *e) {
-        int out=0, ci,di,es,ba;
+        int ci,di,es,ba;
         if(profundidade==0) return -1;
         if(e->jogador_atual==1){
             if(linha==0 && coluna==8) return caminho;
