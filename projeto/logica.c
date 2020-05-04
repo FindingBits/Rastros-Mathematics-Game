@@ -100,7 +100,7 @@ void jogarAutoAdv(ESTADO *e){
         //minimax(profundidade max,caminho,linha,coluna,copia da tabela);
         for(i=0;i<8;i++){
             for(j=1;j<9;j++){
-                tab[i][j]==e->tab[i][j];
+                tab[i][j]=e->tab[i][j];
             }
         }
        ci= minimax(16,0,e->ultima_jogada.linha-1,e->ultima_jogada.coluna,tab,e);
