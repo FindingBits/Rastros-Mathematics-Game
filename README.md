@@ -1,12 +1,8 @@
-# LAPL3G04
+# Rastros-Mathematical-Game
 #### O jogo de tabuleiro Rastros feito na linguagem C
 
-## Turno
-  * PL3
-## Curso
-  * LCC
-## Número do Grupo
-  * 4
+## Turno, Curso e Grupo
+  * PL3 / LCC / 04
 ## Elementos 
   * [(@FrancesinhaMan) João Manuel Cardoso Guedes (a94013)](https://github.com/FrancesinhaMan)
     * Realizou a **lógica** e uma parte do main
