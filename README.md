@@ -1,5 +1,5 @@
-# Rastros-Mathematical-Game
-#### O jogo de tabuleiro Rastros feito na linguagem C
+# Rastros-Mathematics-Game
+#### O jogo de tabuleiro Rastros feito na linguagem C para a cadeira de Laboratórios de Algoritmia I
 
 ## Turno / Curso / Grupo
   * PL3 / LCC / 04
